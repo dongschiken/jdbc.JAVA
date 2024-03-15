@@ -1,0 +1,40 @@
+package days01;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+/**
+ * @author dongs
+ * @date 2024. 3. 15. - 오후 3:45:03
+ * @subject  월요일 시험 복습 문제
+ * @content scott 접속 + dept 테이블 SELECT 
+ */
+public class Ex03 {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		
+		String className = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+		
+		// 1. 드라이버 로딩
+		// 2. connection 객체 생성
+		// 3. 해야할 작업
+		// 4. connection 클로즈
+		Connection conn = null;
+		Class.forName(className);
+		
+		conn = DriverManager.getConnection(url, user, password);
+		System.out.println(conn.isClosed() ? "연결 실패" : "연결 성공");
+		
+		
+		System.out.println("end");
+		conn.close();
+		System.out.println(conn.isClosed() ? "연결 실패" : "연결 성공");
+		
+
+	}
+
+}

@@ -1,0 +1,44 @@
+package days01;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import oracle.net.jdbc.TNSAddress.SOException;
+
+public class Ex02 {
+
+	public static void main(String[] args)  {
+		// [ Ex02.java <--> localhost oracle 서버에 연결 ]
+		String className = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+				
+//		Class.forName("패키지.클래스명");
+		try {
+			// 1. Class.forName() JDBC 드라이버 로딩
+			Class.forName(className);
+			// 2. Connection객체 생성 - DriverManager.getConnection
+			Connection conn = DriverManager.getConnection(url, user, password);
+			
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException s) {
+			s.printStackTrace();
+		}finally {
+			conn.close();
+		}
+		System.out.println("end");
+
+		
+		// 3. 필요한작업 ( CRUD )
+		// 4. Connection 닫기 (Close)
+		
+		
+		
+		
+	}
+
+}
