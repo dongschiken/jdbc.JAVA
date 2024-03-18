@@ -1,28 +1,27 @@
 package domain;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
-@AllArgsConstructor
-@Getter
-@Setter
-@NoArgsConstructor
 @Data
-@Builder
-@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+
+//empno, ename, job, mgr, hiredate, sal, comm, deptno
 public class EmpVO {
-	int empno;
-	String ename;
-	String job;
-	int mgr;
-	String hiredate;
-	int sal;
-	int comm;
-	int deptno;
+	
+		int empno;
+		String ename;
+		String job;
+		String hiredate;
+		int mgr;
+		int sal;
+		int comm;
+		int deptno;
+		
+	
+
+		
 	
 }
