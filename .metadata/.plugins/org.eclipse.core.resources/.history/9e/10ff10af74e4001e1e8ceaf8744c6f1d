@@ -1,0 +1,16 @@
+package days01;
+
+
+public class Ex04 {
+
+	public static void main(String[] args)  {
+		String url = "oracle:jdbc:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+		String className = "jdbc.oracle.driver.OracleDriver";
+		
+		
+		
+		
+	}
+}

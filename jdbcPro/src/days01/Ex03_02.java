@@ -53,14 +53,12 @@ public class Ex03_02 {
 			deptno = rs.getInt("deptno");
 			dname = rs.getString("dname");
 			loc = rs.getString("loc");		
-//			System.out.printf("%d\t%s\t%s\n", deptno, dname, loc);
 			
+			/* System.out.println(deptno + ", " + dname + ", " + loc ); */
 			DeptVO vo = new DeptVO(deptno, dname, loc);
 			list.add(vo);
 			
 //			list.add(new DeptVO(deptno, dname, loc));
-			
-			
 			
 		}
 		dispDept(list);
@@ -74,8 +72,8 @@ public class Ex03_02 {
 		Iterator ir = list.iterator();
 		while (ir.hasNext()) {
 			DeptVO deptvo = (DeptVO) ir.next();
-			System.out.println(deptvo.toString());
-//			System.out.println(deptvo.getDeptno() + "  " + deptvo.getDname() + "  " + deptvo.getLoc());
+//			System.out.println(deptvo.toString());
+			System.out.println(deptvo.getDeptno() + "  " + deptvo.getDname() + "  " + deptvo.getLoc());
 		}
 	}
 }

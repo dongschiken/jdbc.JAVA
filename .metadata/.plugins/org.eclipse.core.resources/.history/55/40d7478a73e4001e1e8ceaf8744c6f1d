@@ -1,0 +1,29 @@
+package domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
+public class EmpVO {
+	int empno;
+	String ename;
+	String job;
+	int mgr;
+	String hiredate;
+	int sal;
+	int comm;
+	int deptno;
+	
+	@Override
+	public String toString() {
+		return ("empno=" + empno + ", ename=" + ename + ", job=" + job + ", mgr=" + mgr + ", hiredate=" + hiredate
+				+ ", sal=" + sal + ", comm=" + comm + ", deptno=" + deptno);
+	}
+	
+ }
+
