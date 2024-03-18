@@ -63,7 +63,13 @@ public class Ex04 {
 		stmt.close();
 		conn.close();
 		
-		
+		/*
+		 * 드라이버 로딩
+		 * DriverManager를 통해 connection객체 생성
+		 * 해야할 작업
+		 * 닫아주는 작업
+		 * 
+		 */
 		
 	}
 

@@ -18,4 +18,7 @@ public class EmpVO {
 	int sal;
 	int comm;
 	int deptno;
+
+//empno, ename, job, mgr, hiredate, sal, comm, deptno
+
 }
