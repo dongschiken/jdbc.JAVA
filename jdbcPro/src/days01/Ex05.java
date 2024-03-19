@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -42,7 +43,7 @@ public class Ex05 {
 		int empno;
 		String dname;
 		String ename;
-		String hiredate;
+		Date hiredate;
 		int pay;
 		int salgrade;
 		
@@ -82,11 +83,11 @@ public class Ex05 {
 			empno = rs.getInt("empno");  
 			dname = rs.getString("dname");
 			ename = rs.getString("ename");
-			hiredate = rs.getString("hiredate").substring(0,11);
+			hiredate = rs.getDate("hiredate");
 			pay = rs.getInt("pay");
 			salgrade = rs.getInt("sal_grade");
 
-			emp_list.add(new EmpVO(empno, dname, ename, hiredate, pay, salgrade));
+			emp_list.add(new EmpVO(empno, dname, ename, hiredate, pay, salgrade, salgrade, salgrade));
 		} while (rs.next());
 		
 		dispEmpList(emp_list);

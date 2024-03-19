@@ -1,22 +1,23 @@
 package domain;
 
-import java.sql.Date;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+import lombok.Setter;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class DeptEmpSalgradeVO {
-	private int empno;
-	private String dname;
-	private String ename;
-	private Date hiredate;
-	private double pay;
+@Getter
+@Setter
+public class SalgradeVO {
+		
 	private int grade;
+	private int losal;
+	private int hisal;
+	private int cnt;
+	
 }

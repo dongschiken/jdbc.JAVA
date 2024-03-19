@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -43,9 +44,9 @@ public class Ex03 {
 //		Connection conn = null;
 //		Statement stmt = null;
 //		ResultSet rs = null;
-//		사원검색();
+		사원검색();
 //		사원추가();
-		사원수정();
+//		사원수정();
 		
 		
 		// 개인문제 resultset 두개 statement 두개
@@ -82,9 +83,10 @@ public class Ex03 {
 //				searchWord);
 //	}  
 	
+	
 	private static void 사원검색() {
 		System.out.println("검색 조건 검색어를 입력하시오 >> ");
-		Statement stmt = null;
+		PreparedStatement pstmt = null;
 		ArrayList<EmpVO> emp_list = null;
 		ResultSet rs = null;
 		int searchCondition = 1;
@@ -96,22 +98,12 @@ public class Ex03 {
 		
 		searchCondition = sc.nextInt();
 		searchWord = sc.next();
+		// 사원 번호, 사원 명으로만 검색
+		// 1번일경우 사원번호로 검색
+		// 2번일경우 사원명으로 검색
+		// 3번일경우 job으로 검색
+		// 4번일경우 job 사원명으로 검색
 		
-		if ( searchCondition == 1) {
-			sql += String.format(" empno IN (%s)", searchWord);
-		}else if( searchCondition == 2) {
-			sql += String.format("REGEXP_LIKE(%s, '%s', 'i') OR REGEXP_LIKE(%s, '%s', 'i')"
-					,"ename", searchWord, "job", searchWord );
-		}else if( searchCondition == 3) {
-			sql += String.format("REGEXP_LIKE(%s, '%s', 'i') OR REGEXP_LIKE(%s, '%s', 'i')  "
-					, "ename", searchWord, "job", searchWord);
-		}else if( searchCondition == 4) {
-			sql += String.format("REGEXP_LIKE(%s, '%s', 'i') OR REGEXP_LIKE(%s, '%s', 'i') OR REGEXP_LIKE(%s, '%s', 'i') "
-					, "empno", searchWord, "mgr", searchWord, "deptno", searchWord);
-		}else if( searchCondition == 5) {
-			sql += String.format("REGEXP_LIKE(%s, '%s', 'i') OR REGEXP_LIKE(%s, '%s', 'i')  "
-					, "empno", searchWord,  "mgr", searchWord );
-		}
 		int empno;
 		String ename;
 		String job;
@@ -120,11 +112,29 @@ public class Ex03 {
 		int sal;
 		int comm ;
 		int deptno;
-		
-		
+		if(searchCondition == 1) {
+			sql += "empno = ? ";
+		}else if(searchCondition == 2) {
+			sql += "REGEXP_LIKE(ename , ?, 'i')" ;
+		}else if(searchCondition == 3) {
+			sql += "REGEXP_LIKE(job , ?, 'i')" ;
+		}else {
+			sql += "REGEXP_LIKE(ename , ?, 'i') OR REGEXP_LIKE(job , ?, 'i')" ;
+		}	
+			
 		try {
-			stmt = conn.createStatement();
-			rs = stmt.executeQuery(sql);
+			pstmt = conn.prepareStatement(sql);
+			if(searchCondition == 1) {
+				pstmt.setInt(1, Integer.parseInt(searchWord));
+			}else if(searchCondition == 2) {
+				pstmt.setString(1, searchWord);
+			}else if(searchCondition == 3) {
+				pstmt.setString(1, searchWord);
+			}else {
+				pstmt.setString(1, searchWord);
+				pstmt.setString(2, searchWord);
+			}
+			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
 				emp_list = new ArrayList<EmpVO>();
@@ -147,6 +157,7 @@ public class Ex03 {
 			e.printStackTrace();
 		}
 	}
+	
 	
 //	empno, ename, job, mgr, hiredate, sal, comm, deptno
 	private static void 사원추가() {
@@ -230,6 +241,7 @@ public class Ex03 {
 		}
 	}
 	
+	
 	private static void 사원수정() throws IOException {
 		
 		Statement stmt = null;
@@ -280,6 +292,15 @@ public class Ex03 {
 		System.out.println("수정할 사원의 이름을 입력하시오 (없으면 엔터) >> ");
 		ename = "";
 		ename = br.readLine();
+		if(ename.equals("")) {
+			
+			
+			
+			
+			
+			
+		};
+		
 		
 		System.out.println("수정할 사원의 직업을 입력하시오 (없으면 엔터) >> ");
 		job = "";
