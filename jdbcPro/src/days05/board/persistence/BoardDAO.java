@@ -12,4 +12,6 @@ public interface BoardDAO {
 	
 	// 2. 게시글 쓰기 
 	int insert(BoardDTO dto) throws SQLException;
+	
+	
 }
