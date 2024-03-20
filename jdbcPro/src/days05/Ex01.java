@@ -19,14 +19,15 @@ import days05.board_domain.BoardDTO;
 public class Ex01 {
 
 	public static void main(String[] args) throws SQLException {
-		Connection conn = DBConn.getConnection();
-		BoardDAOImpl daoimpl = new BoardDAOImpl(conn);
-		ArrayList<BoardDTO> list = daoimpl.select();
-		Iterator<BoardDTO> ir = list.iterator();
-		while (ir.hasNext()) {
-			BoardDTO boardDTO = (BoardDTO) ir.next();
-			System.out.println(boardDTO.toString());
-		}
+		// 게시판 전체목록 출력
+//		Connection conn = DBConn.getConnection();
+//		BoardDAOImpl daoimpl = new BoardDAOImpl(conn);
+//		ArrayList<BoardDTO> list = daoimpl.select();
+//		Iterator<BoardDTO> ir = list.iterator();
+//		while (ir.hasNext()) {
+//			BoardDTO boardDTO = (BoardDTO) ir.next();
+//			System.out.println(boardDTO.toString());
+//		}
 			// [1] 게시판 만들기위한 패키지 선언
 			// days05 
 			// 		- board

@@ -92,7 +92,7 @@ public class BoardDAOImpl implements BoardDAO{
 
 	@Override
 	public int insert(BoardDTO dto) throws SQLException {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 	
