@@ -1,0 +1,135 @@
+-- 문제1) 번호,이름,국,영,수,총점,평균,등수,등급을 관리하는 tbl_score 테이블 생성
+--       (num, name, kor, eng, mat, tot, avg, rank, grade ) 
+
+
+CREATE TABLE tbl_score
+(
+    num NUMBER  PRIMARY KEY,
+    name VARCHAR2(5 CHAR) NOT NULL,
+    kor NUMBER(3),
+    eng NUMBER(3),
+    mat NUMBER(3),
+    tot NUMBER(3),
+    avg NUMBER(5, 2),
+    rank NUMBER(2),
+    grade VARCHAR2(1 CHAR)
+)
+
+SELECT *
+FROM tbl_score;
+
+CREATE SEQUENCE seq_tblscore INCREMENT BY 1 START WITH 1001 NOCYCLE NOCACHE;
+
+-- 문제4) 학생 추가하는 저장 프로시저 생성
+--EXEC up_insertscore(1001, '홍길동', 89,44,55 );
+--EXEC up_insertscore(1002, '윤재민', 49,55,95 );
+--EXEC up_insertscore(1003, '김도균', 90,94,95 );
+
+CREATE OR REPLACE PROCEDURE up_insertscore
+(
+    pnum tbl_score.num%TYPE,
+    pname tbl_score.name%TYPE,
+    pkor tbl_score.kor%TYPE,
+    peng tbl_score.eng%TYPE,
+    pmat tbl_score.mat%TYPE
+)
+IS
+    vtot NUMBER(3);
+BEGIN
+    vtot := pkor + peng + pmat;
+    INSERT INTO tbl_score (num, name, kor, eng, mat, tot, avg)
+    VALUES ( pnum, pname, pkor, peng, pmat, pkor + peng + pmat, ROUND(vtot/3, 2) );
+    COMMIT;
+--EXCEPTION
+END;
+
+DELETE tbl_score;
+
+EXEC up_insertscore(1001, '홍길동', 89,44,55 );
+EXEC up_insertscore(1002, '윤재민', 49,55,95 );
+EXEC up_insertscore(1003, '김도균', 90,94,95 );
+
+SELECT *
+FROM tbl_score;
+-- 문제2) 번호를 기본키로 설정
+-- 문제3) seq_tblscore 시퀀스 생성
+
+
+
+-- 문제5) 학생 수정하는 저장 프로시저 생성
+CREATE OR REPLACE PROCEDURE up_updateScore
+(
+    pnum tbl_score.num%TYPE,
+    pkor tbl_score.kor%TYPE DEFAULT NULL,
+    peng tbl_score.eng%TYPE DEFAULT NULL,
+    pmat tbl_score.mat%TYPE DEFAULT NULL
+)
+IS
+    vtot NUMBER(3);
+BEGIN
+    
+    UPDATE tbl_score
+    SET kor = NVL(pkor, kor),
+        eng = NVL(peng, eng),
+        mat = NVL(pmat, mat),
+        tot = kor + eng + mat
+    WHERE num = pnum;
+    
+    UPDATE tbl_score
+    SET avg = tot/3
+    WHERE num = pnum;
+--EXCEPTION
+END;
+--EXEC up_updateScore( 1001, 100, 100, 100 );
+--EXEC up_updateScore( 1001, pkor =>34 );
+--EXEC up_updateScore( 1001, pkor =>34, pmat => 90 );
+--EXEC up_updateScore( 1001, peng =>45, pmat => 90 );
+
+
+-- 문제6) 학생 삭제하는 저장 프로시저 생성
+ EXEC UP_DELETESCORE( 1002 ); 
+
+CREATE OR REPLACE PROCEDURE up_deletescore
+(
+    pnum tbl_score.num%TYPE
+)
+IS
+BEGIN
+    DELETE tbl_score
+    WHERE num = pnum;
+--EXCEPTION
+END;
+
+-- 문제7) 모든 학생 출력하는 저장 프로시저 생성( 명시적 커서 사용 )
+-- EXEC UP_SELECTSCORE;
+CREATE OR REPLACE PROCEDURE up_selectscore
+IS
+    TYPE tbl_score_type IS RECORD
+    (
+        num tbl_score.num%TYPE,
+        name tbl_score.name%TYPE,
+        kor tbl_score.kor%TYPE,
+        eng tbl_score.eng%TYPE,
+        mat tbl_score.mat%TYPE,
+        tot tbl_score.tot%TYPE,
+        avg tbl_score.avg%TYPE
+    );
+    vtbl_score tbl_score_type;
+    CURSOR tbl_score_cur IS 
+    (
+        SELECT num, name, kor, eng, mat, tot, avg, rank, grade
+        FROM tbl_score
+    );
+    
+BEGIN
+    OPEN tbl_score_cur;
+    LOOP
+    FETCH tbl_score_cur INTO vtbl_score;
+    EXIT WHEN tbl_score_cur%NOTFOUND;
+    DBMS_OUTPUT.PUT_LINE( vtbl_score.num || ' ' || vtbl_score.name || ' ' || vtbl_score.kor || ' ' || vtbl_score.eng || ' ' || vtbl_score.mat || ' ' || vtbl_score.avg );
+    END LOOP;
+--EXCEPTION
+END;
+
+-- 문제8) 학생 검색하는 저장 프로시저 생성
+-- EXEC UP_SEARCHSCORE(1001);
