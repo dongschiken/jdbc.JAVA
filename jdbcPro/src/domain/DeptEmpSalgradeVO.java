@@ -19,4 +19,20 @@ public class DeptEmpSalgradeVO {
 	private Date hiredate;
 	private double pay;
 	private int grade;
+	private int deptno;
+	
+	
+	
+	public DeptEmpSalgradeVO(int empno, String ename, Date hiredate, double pay, int deptno) {
+		super();
+		this.empno = empno;
+		this.ename = ename;
+		this.hiredate = hiredate;
+		this.pay = pay;
+		this.deptno = deptno;
+	}
+	
+	
 }
+
+

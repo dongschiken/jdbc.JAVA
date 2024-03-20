@@ -46,7 +46,7 @@ private Date date;
 //        
 //		Connection conn = DBConn.getConnection();
 //		EmpDAO dao = new EmpDAOImp1(conn);
-//		EmpVO vo = new EmpVO( 9999 , "동영", "SALES", date  , 9998, 1000.0, 100.0, 40);
+//		EmpVO vo = new EmpVO( 9999 , "동영", "SALES", date  , 9998, 1000.0, 100.0, 0);
 //		int rowCount = dao.addEmp(vo);
 //		
 //		if(rowCount == 1) {
