@@ -15,7 +15,7 @@ import days05.board_domain.BoardDTO;
 class BoardDAOImplTest {
 
 	@Test
-	void test() {
+	void test_select() {
 		Connection conn = DBConn.getConnection();
 		BoardDAO dao = new BoardDAOImpl(conn);
 		
@@ -28,5 +28,24 @@ class BoardDAOImplTest {
 		System.out.println(" 게시글 수" + list.size() + "개");
 		DBConn.close();
 	}
-
+	// writer, pwd, email, title,  tag, content
+	@Test
+	void test_insert() {
+		Connection conn = DBConn.getConnection();
+		BoardDAO dao = new BoardDAOImpl(conn);
+		BoardDTO dto = new BoardDTO().builder()
+				.writer("동스")
+				.pwd("1234")
+				.email("123@naver.co")
+				.title("오늘 심심하네")
+				.tag(2)
+				.content("오늘 참 심심한 날이네 뭐하고 놀지")
+				.build();
+		try {
+			dao.insert(dto);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		DBConn.close();
+	}
 }

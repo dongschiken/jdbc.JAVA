@@ -1,6 +1,7 @@
 package days05.board.persistence;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +13,14 @@ import java.sql.Date;
 
 import days05.board_domain.BoardDTO;
 import domain.EmpVO;
-
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Builder
 public class BoardDAOImpl implements BoardDAO{
 	
 	
@@ -92,8 +100,29 @@ public class BoardDAOImpl implements BoardDAO{
 
 	@Override
 	public int insert(BoardDTO dto) throws SQLException {
+		Connection conn = DBConn.getConnection();
+		PreparedStatement pstmt = null;
+		int rowCount = 0;
 		
-		return 0;
+		String sql = "INSERT INTO TBL_CSTVSBOARD (seq, writer, pwd, email, title, writedate,  tag, content)  "
+				+ " VALUES ( seq_tbl_cstvsboard.NEXTVAL , ?, ?, ?, ?, SYSDATE , ?, ?)";
+		
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, dto.getWriter());
+		pstmt.setString(2, dto.getPwd());
+		pstmt.setString(3, dto.getEmail());
+		pstmt.setString(4, dto.getTitle());
+		pstmt.setInt(5, dto.getTag());
+		pstmt.setString(6, dto.getContent());
+
+		rowCount = pstmt.executeUpdate();
+		if(rowCount == 1) {
+			System.out.println("게시글 추가 성공!");
+		}else {
+			System.out.println("게시글 추가 실패!");
+		}
+		
+		return rowCount;
 	}
 	
 	
