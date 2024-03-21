@@ -18,7 +18,7 @@ public class BoardDTO {
 	private String 	email;
 	private String 	title;
 	private Date  	writedate;
-	private int 	 	readed;
+	private long 	 	readed;
 	private int 	 	tag;
 	private String 	content;
 	

@@ -1,13 +1,17 @@
 package days05;
 
 import java.sql.Connection;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import com.util.DBConn;
 
-import days05.board.persistence.BoardDAOImpl;
+import days05.board.controller.BoardController;
+import days05.board.persistance.BoardDAO;
+import days05.board.persistance.BoardDAOImpl;
+import days05.board.service.BoardService;
 import days05.board_domain.BoardDTO;
 
 /**
@@ -29,7 +33,7 @@ public class Ex01 {
 //			System.out.println(boardDTO.toString());
 //		}
 			// [1] 게시판 만들기위한 패키지 선언
-			// days05 
+			// days05  
 			// 		- board
 			//			-- domain
 			//				 BoardDTO.java			클래스
@@ -87,8 +91,27 @@ public class Ex01 {
 //	    WHERE MOD( seq, 9 ) IN(3, 5);
 //	    COMMIT;
 //	END;
-
+		 													//BoardDTO객체 생성
+			// 사용자 글작성후 -> BoardController.java -> BoardService.java
+			// 	게시글 쓰기 : 작성 												1) 게시글 쓰기(DB처리, 로그기록)  BoardDTO
+																					//    -    BoardDAOImpl.java  -> 오라클 DB서버를 연동
+																					//    -     INSERT(dto객체) 작업
 		
-	}
+																					// DB처리 + 로그기록 + 3번째 작업... 논리적인 처리작업으로 성공하면 커밋, 실패하면 롤백한다.
+		
+		// 목록, 쓰기, 삭제, 수정, 검색
+		// BoardDAO, BoardDAOImpl, BoardService, BoardController
+		Connection conn = DBConn.getConnection();
+		BoardDAO dao =  new BoardDAOImpl(conn);
+		BoardService service = new BoardService(dao);
+		BoardController controller = new BoardController(service);
+		
+		// 이동찬, 1234, lee@sist.com, 오류, 0, 오류해결
+		controller.boardStart();
+		
+		
+		
+		
+	}		
 
 }
