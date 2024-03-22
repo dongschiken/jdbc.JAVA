@@ -1,0 +1,82 @@
+package days01;
+//package days01;
+//
+//import java.sql.Connection;
+//import java.sql.DriverManager;
+//import java.sql.ResultSet;
+//import java.sql.SQLException;
+//import java.sql.Statement;
+//import java.util.ArrayList;
+//import java.util.Iterator;
+//
+//import domain.DeptVO;
+//
+///**
+// * @author dongs
+// * @date 2024. 3. 15. - 오후 3:45:03
+// * @subject  월요일 시험 복습 문제
+// * @content scott 접속 + dept 테이블 SELECT 
+// */
+//public class Ex03_02 {
+//
+//	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+//		
+//		String className = "oracle.jdbc.driver.OracleDriver";
+//		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+//		String user = "scott";
+//		String password = "tiger";
+//		Statement stmt = null;
+//		ResultSet rs = null;
+//		int deptno = 0;
+//		String dname = "";
+//		String loc = "";
+//		// list null로 잡으면 안된다.
+//		ArrayList<DeptVO> list = new ArrayList(4);
+////		ArrayList<DeptVO> list = null;
+//		// 1. 드라이버 로딩
+//		// 2. connection 객체 생성
+//		// 3. 해야할 작업
+//		// 4. connection 클로즈
+//		Connection conn = null;
+//		Class.forName(className);
+//		
+//		conn = DriverManager.getConnection(url, user, password);
+//		
+//		String sql = " SELECT * FROM dept ";
+//		stmt = conn.createStatement();
+//		rs = stmt.executeQuery(sql);
+//		//  다음 레코드가 있는지 확인하고 + 다음 레코드(행)로 이동하는 메서드 .next();
+//		while (rs.next()) {
+////			deptno = rs.getInt(1);
+////			dname = rs.getString(2);
+////			loc = rs.getString(3);			
+//			
+//			deptno = rs.getInt("deptno");
+//			dname = rs.getString("dname");
+//			loc = rs.getString("loc");		
+////			System.out.printf("%d\t%s\t%s\n", deptno, dname, loc);
+//			
+//			DeptVO vo = new DeptVO(deptno, dname, loc);
+//			list.add(vo);
+//			
+////			list.add(new DeptVO(deptno, dname, loc));
+//			
+//			
+//			
+//		}
+//		dispDept(list);
+//		rs.close();
+//		stmt.close();
+//		conn.close();
+//
+//	}
+//
+//	private static void dispDept(ArrayList<DeptVO> list) {
+//		Iterator ir = list.iterator();
+//		while (ir.hasNext()) {
+//			DeptVO deptvo = (DeptVO) ir.next();
+//			System.out.println(deptvo.toString());
+////			System.out.println(deptvo.getDeptno() + "  " + deptvo.getDname() + "  " + deptvo.getLoc());
+//		}
+//	}
+//}
