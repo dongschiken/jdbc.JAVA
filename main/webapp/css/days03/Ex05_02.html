@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	/* 첫번째 자식이 p 인놈 (여기에는 없다.)*/
+/* 	p:first-child{
+		color: blue;
+	}
+
+	p:first-of-type{
+		color:blue;
+	}
+	p:last-child{
+		color: red;
+	} */
+	p:last-of-type{
+		color: red;
+	}
+	
+	p:nth-child(3){
+		color: red;
+	}
+	p:nth-of-type(3){
+		color: blue;
+	}
+</style>
+</head>
+<body>
+
+<h3>body 1 번째 자식</h3>
+<p>Lorem ipsum dolor sit.</p>
+<p>Aspernatur optio dolor omnis.</p>
+
+<h3>body 2 번째 자식</h3>
+<h3>body 3 번째 자식</h3>
+<p>Lorem ipsum dolor sit.</p>
+<p>* Aspernatur optio dolor omnis.</p>
+
+<h3>body 4 번째 자식</h3>
+
+<p>Lorem ipsum dolor sit.</p>
+<p>Aspernatur optio dolor omnis.</p>
+
+<div>
+    <h3>div 1 번째 자식</h3>
+    <h3>div 2 번째 자식</h3>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Aspernatur optio dolor omnis.</p>
+    <h3>div 3 번째 자식</h3>
+    
+   <p>Lorem ipsum dolor sit.</p>
+   <p>* Quo ipsa illo voluptatum.</p>
+   <h3>div 4 번째 자식</h3>
+</div>
+
+
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
+<style>
+span.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+
+
+</head>
+<body>
+	<header>
+		<h1 class="main">
+			<a href="#" style="position: absolute; top: 30px;">dongs Home</a>
+		</h1>
+		<ul>
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+		</ul>
+	</header>
+	<div>
+		<xmp class="code"> 1) webapp > resources > cdn-main >
+		example.css 2) link > href ="example.css" 3) script src="example.js" </xmp>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
+			assumenda numquam quasi cumque quibusdam modi dolorem laudantium illo
+			labore culpa. Culpa ut tempore ratione delectus magni harum vero
+			numquam ex?</p>
+		<h2>H2 Title</h2>
+		<h3>H3 Title</h3>
+
+		<hr>
+
+		<div>
+			<h3>Form Controls</h3>
+			<form action="">
+				<div>
+					<input type="text" class="short" placeholder="이름입력" />
+				</div>
+				<div>
+					<input type="text" class="long" placeholder="연락처 입력" />
+				</div>
+				<div>
+					<input type="text" class="full" placeholder="주소 입력" />
+				</div>
+			</form>
+
+
+			<h3>일반 버튼</h3>
+			<form>
+				<div>
+					<input type="button" class="primary" value="메인 버튼" /> <input
+						type="button" value="보조 버튼" />
+				</div>
+			</form>
+
+			<h3>이미지 버튼</h3>
+			<form>
+				<div>
+					<button>마우스 이미지</button>
+					<button class="add">글쓰기</button>
+					<button class="back">돌아가기</button>
+				</div>
+			</form>
+
+			<h3>라벨 컨트롤</h3>
+			<form>
+				<div class="group">
+					<label for="name">이름</label> <input id="name" type="text"
+						class="short" placeholder="이름 입력"></input>
+				</div>
+				<div class="group">
+					<label for="hp">연락처</label> <input id="hp" type="text" class="long"
+						placeholder="연락처 입력"></input>
+				</div>
+				<div class="group">
+					<label for="addr">주소</label> <input id="addr" type="text"
+						class="full" placeholder="주소 입력"></input>
+				</div>
+			</form>
+
+
+			<h3>버튼 그룹</h3>
+			<form>
+				<div class="group">
+					<input type="button" value="확인" /> <input type="button" value="취소" />
+					<input type="button" value="삭제" /> <input type="button" value="수정" />
+				</div>
+
+				<div class="group">
+					<button class="add">글쓰기</button>
+					<button class="list">글목록</button>
+				</div>
+			</form>
+
+			<h3>테이블 ( 가로 )</h3>
+			<table class="vertical">
+				<tr>
+					<th>column</th>
+					<th>column</th>
+					<th>column</th>
+				</tr>
+				<tr>
+					<td>cell</td>
+					<td>cell</td>
+					<td>cell</td>
+				</tr>
+				<tr>
+					<td>cell</td>
+					<td>cell</td>
+					<td>cell</td>
+				</tr>
+				<tr>
+					<td>cell</td>
+					<td>cell</td>
+					<td>cell</td>
+				</tr>
+			</table>
+
+			<h3>테이블 ( 세로 )</h3>
+
+			<h3>패널</h3>
+			<div class="panel">title=NoticeLorem ipsum dolor sit amet,
+				consectetur adipisicing elit. Maxime a tenetur laboriosam maiores
+				odio magni praesentium suscipit voluptas ullam dolorem repellendus
+				numquam officia quod commodi est nisi autem corporis ipsam?
+			</div>
+			<h3>배지</h3>
+			<div>Lorem ipsum dolor sit.<span class="badge right red">11</span></div>
+			
+			<h3>좌우분리</h3>
+			<div class="seperate">
+				<div>PREV</div>
+				<div>NEXT</div>
+			</div>
+
+		</div>
+		
+		<h3>목록</h3>
+		<div class="list">
+				<item>item1</item>
+				<item>item2</item>
+				<item>item3</item>
+		</div>
+		
+		<div class="list full">
+			<div>item1 <span class="badge right red">5</span></div>
+			<div>item2 <span class="badge right red">25</span></div>
+			<div>item3 <span class="badge right red">15</span></div>
+		</div>
+	
+		<h3>프로그래밍 코드</h3>
+		<pre class="code">
+			int age = 10;
+			String name = "홍길동";
+			System.out.println(name);
+		</pre>
+		
+		
+		<h3>페이징 처리</h3>
+		<div class="center">
+			<div class="pagination">
+				<a href="">1</a>
+				<a href="">2</a>
+				<a href="" class="active">3</a>
+				<a href="">4</a>
+				<a href="">5</a>
+				<a href="">6</a>
+				<a href="">7</a>
+				<a href="">8</a>
+				<a href="">9</a>
+				<a href="">10</a>
+				<a href="">next</a>
+			
+			</div>
+		</div>
+	
+	</div>
+</body>
+</html>

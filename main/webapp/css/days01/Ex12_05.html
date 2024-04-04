@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	p{
+		border: 1px solid gray;
+		/* 첫번째 라인에 들여쓰기 */
+		text-indent: 100px;
+	}
+	h2{
+		letter-spacing: 5px;
+	}
+	h3{
+		letter-spacing: -2px;
+	}
+	p.small{
+		line-height: 0.7;	
+	}
+	p.big{
+		line-height: 1.8;
+	}
+	div{
+		border: 1px solid red;
+		/* word-spacing: 10px; */
+		word-spacing: -2px;
+		
+		/* 텍스트 줄바꿈 비활성화 */
+		white-space: nowrap;
+	}
+</style>
+</head>
+<body>
+
+<pre>
+	텍스트 간격
+	text-indent: 첫 번째 라인에 들여쓰기
+	letter-spacing: 문자와 문자사이의 간격
+	word-spacing: 단어와 단어 사이의 간격
+	line-height: 라인과 라인간의 간격
+	white-space: 공백을 처리하는 방법 지정
+		└ word-break;
+		└ word-wrap;
+</pre>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur in corporis similique esse doloremque maxime cupiditate. Autem totam saepe eveniet aperiam enim voluptatibus officiis alias dicta quo mollitia ullam quidem!</p>
+
+<h2>This is Heading 2</h2>
+<h3>This is Heading 3</h3> 
+
+<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur in corporis similique esse doloremque maxime cupiditate. Autem totam saepe eveniet aperiam enim voluptatibus officiis alias dicta quo mollitia ullam quidem!</p>
+
+<p class="big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur in corporis similique esse doloremque maxime cupiditate. Autem totam saepe eveniet aperiam enim voluptatibus officiis alias dicta quo mollitia ullam quidem!</p>
+
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quos ipsam esse impedit quia dolores facilis natus laborum in adipisci iste sed aliquid consequatur veniam accusantium doloremque dolorem repellendus dolore.</div>
+</body>
+</html>

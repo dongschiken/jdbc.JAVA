@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	body{
+		text-align: center;
+	
+	
+	}
+	.tooltip{
+		position: relative;
+		border-bottom: 1px dotted black;
+		
+		display: inline-block;
+	
+	}
+	.tooltip .tooltiptext{
+		visibility: hidden;
+		position: absolute;
+		
+		left: 50%;
+		bottom: 150%;
+		top: 150%;
+		margin-left: -60px;
+		z-index: 1;
+		
+		background-color: black;
+		color: white;
+		width:120px;
+		text-align: center;
+		padding: 5px 0;
+		border-radius: 6px;
+	
+	}
+	.tooltip:hover .tooltiptext{
+		visibility: visible;
+	
+	}
+	
+	/* 의사 요소  : 
+	   의사 클래스 : 상태 
+	 */
+	.tooltip .tooltiptext::after{
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-style: solid;
+		border-width: 5px;
+		border-color: black transparent transparent transparent;
+	}
+	
+</style>
+</head>
+<body>
+<pre>
+	툴팁기능(Tooltip) - 풍선 도움말
+	요소에 마우스를 올리면 추가 정보를 지정하는데 사용하는 기능
+	
+</pre>
+
+
+<div class="tooltip">HOver Me
+<span class="tooltiptext">Tooltip Info</span>
+</div>
+</body>
+</html>

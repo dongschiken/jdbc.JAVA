@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body onload="clockShow()" onunload="">
+	
+	
+	<div id="clock" style="text-align: center; font-size: 20px; width: 10em;">
+		
+	</div>
+
+<script>
+	function clockShow(){
+		let clockDiv = document.getElementById("clock");
+		/* let clockDiv = document.querySelector("body div#clock"); */
+		/* alert("load 이벤트 발생"); */
+		let now = new Date();
+		let mt = now.getMonth()+1;
+		let dy = now.getDate();
+		let hh = now.getHours();
+		let mm = now.getMinutes();
+		let ss = now.getSeconds();
+		
+		clockDiv.innerHTML = "<b>" + mt + "<b/>/"+"<b>" + dy + "<b/>/"
+		+"<b>" + hh + "<b/>:"+"<b>" + mm + "<b/>"+"<b>:" + ss + "<b/>";
+		
+		// 재귀 함수 처럼 1초마다 호출 clockShow;
+		// 1000ms 지난 후 등록된 함수 clockShow를 호출
+		setTimeout(clockShow, 1000);
+	}
+</script>	
+</body>
+</html>

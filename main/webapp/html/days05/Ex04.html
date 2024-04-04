@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="init()" onunload="">
+<h3>html form(입력 양식)</h3>
+<form action="Ex04_ok.jsp" method="get" novalidate="novalidate" id="f_form">
+<fieldset> 
+	<!-- input에 pattern="정규표현식"을 사용해서 정규표현식에 맞지 않을경우 예외발생?  -->
+	<legend>로그인</legend>													<!-- 속성명="속성값"이 같을경우 속성명만 줘도된다.  -->
+	<label>아이디	  : </label><input required type="text" id="id" name="id" tabindex="1" autofocus placeholder="아이디"><br>
+	<label for="passwd">비밀번호 : </label><input required maxlength="8" type="password" id="passwd" name="passwd" tabindex="2"><br>
+	<input type="submit" tabindex="3" value="로그인">
+	<input type="reset">
+	<input type="button" value="일반버튼" id="button">
+</fieldset>
+</form>
+ 
+<form>
+<fieldset>
+	<legend>입력 양식</legend>
+	<!-- 데이터 리스트를 사용해서 선택하는 옵션 목록을 설정할 수 있다. -->
+	<input list="browser">
+	<datalist id="browser" >
+		<option value="IE">	
+		<option value="Chrome">	
+		<option value="Firefox">	
+		<option value="Opera">	
+	</datalist>
+	<br>
+	<!-- input type으로 email을 주면 이메일 형식으로 검사한다.  
+		 form태그에 action url이 없으면 요청하러 갔다가 돌아온다.
+	-->
+	Email : <input type="email" placeholder="sample@ss.com"><hr>
+	
+	<!-- name속성으로 그룹화 
+		 checkbox는 여러개 선택가능
+	-->
+	<p>좋아하는 동물?</p>
+	<input type="checkbox" name="animals" value="dog" checked>강아지
+	<input type="checkbox" name="animals" value="cat" checked>고양이
+	<input type="checkbox" name="animals" value="pig">돼지
+	
+	<p>좋아하는 색깔?</p>
+	<input type="checkbox" name="color" value="red">빨강
+	<input type="checkbox" name="color" value="green">녹색
+	<input type="checkbox" name="color" value="blue">파랑
+	
+	<!-- checked는 선택하지 않아도 미리체크해놓는 속성 -->
+	<p>가장 좋아하는 과목?</p>
+	<input type="radio" name="subject" value="java" >자바
+	<input type="radio" name="subject" value="oracle" >오라클
+	<input type="radio" name="subject" value="html" checked>html
+	<input type="radio" name="subject" value="jsp" >jsp
+	<br>
+	
+	<p>부서를 선택?</p><br>
+	<select onchange="alert('경고')" name="deptno" id="deptno" size="4" multiple>
+		<option value="10">ACCOUNTING</option>
+		<option value="20">RESEARCH</option>
+		<option value="30">SALES</option>
+		<option value="40">RESEARCH</option>
+	</select>
+	
+	
+	<br>
+	<!--
+	rows 속성 : 텍스트 영역에 표시되는 라인 수
+	cols 속성 : 텍스트 영역에 표시되는 너비 수
+	
+	  -->
+	<p>하고싶은말을 적으세요</p>
+	<!-- <textarea rows="10" cols="250"></textarea> -->
+	<textarea name="content" style="width: 100%; height: 200px">하고싶은말</textarea>
+	
+	<br>
+	<input type="submit">
+	
+</fieldset>
+</form>
+
+<script>
+	function init(){
+		// 포커스
+		/* document.querySelector("#id").focus(); */
+	}
+	document.querySelector("body > form:nth-child(2) > fieldset > input[type=button]:nth-child(10)").onclick = function() {
+		
+		
+		alert("유효성검사를 한 후에");
+		document.forms[0].submit();
+	}
+	
+</script>
+</body>
+</html>

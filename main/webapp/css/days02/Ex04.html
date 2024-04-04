@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+
+	*{
+		box-sizing: border-box;
+	}
+	.pagination{
+		width: 50%;
+		/* background-color: red; */
+		margin: 0 auto;
+		text-align: center;
+	}
+	.pagination a{
+	/*  밑줄 없애는 코드 */
+		text-decoration: none;
+		color: black;
+		float: left;
+		width: 8.3%;
+	}
+	.pagination a:hover{
+		background-color: #ddd;
+	}
+	.pagination .active{
+		background-color: dodgerblue;
+		color: white;
+	}
+	
+</style>
+
+</head>
+<body>
+<h3>페이징 처리</h3>
+<div class="pagination">
+	<a href="#">1</a>
+	<a href="#">2</a>
+	<a href="#" class="active">3</a>
+	<a href="#">4</a>
+	<a href="#">5</a>
+	<a href="#">6</a>
+	<a href="#">7</a>
+	<a href="#">8</a>
+	<a href="#">9</a>
+	<a href="#">10</a>
+	<a href="#">&gt;</a>
+	<a href="#">&raquo;</a>
+</div>
+
+<script>
+	// 다른 페이지를 클릭해서 보고자 할때 active 클래스 속성을
+	// 보고자 하는 번호의 링크태그에게 클래스 속성을 부여
+	// jquery method : addClass("클래스 명");
+	//				   removeClass("제거할 클래스 명");
+	//				   not(jquery선택자);
+	
+	$(".pagination a").click(function(){
+		/*  클릭한 번호를 콘솔창에 출력
+			console.log($(this).text()); */
+		$(".pagination a").not(this).removeClass("active");
+		$(this).addClass("active");
+		
+	});
+
+</script>
+</body>
+</html>

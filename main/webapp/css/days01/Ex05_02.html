@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	body{
+		background-color: lightblue;
+	}
+	/* 1점 */
+	div{
+		border: 1px solid gray;
+		width: 200px;
+		padding: 10px;
+		
+		background-color: rgba(0, 255, 0, 0.1);
+	}
+	
+	/* 1점 + 10점 */
+	div.first{
+		/* 투명도를 설정하는 속성 0~1까지 */
+		/* 자식 요소도 동일한 투명도를 상속받는다. */
+		opacity: 0.5;
+	}
+	img{
+		opacity: 0.5;
+	}
+	img:hover{
+		opacity: 1.0;
+	}
+	
+</style>
+</head>
+<body>
+<img src="images/img_forest.jpg" alt=""  width="170" height="">
+<img src="images/img_mountains.jpg" alt=""  width="170" height="">
+<img src="images/img_5terre.jpg" alt=""  width="170" height="">
+
+<hr>
+<div class="first">
+	<p>opacit 0.1</p>
+</div>
+<div class="second">
+	<p>opacit 0.3</p>
+</div>
+<div class="third">
+	<p>opacit 0.6</p>
+</div>
+<div>
+	<p>opacit 1.0</p>
+</div>
+
+<!-- .first>lorem3^div*4>lorem3 -->
+<div class="first">Lorem ipsum dolor.</div>
+<div>Lorem ipsum dolor.</div>
+<div>Excepturi recusandae consectetur.</div>
+<div>Ullam eos aut!</div>
+<div>Autem velit laudantium.</div>
+
+</body>
+</html>

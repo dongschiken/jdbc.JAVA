@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	body{
+/* 		background-color: red;
+		background-image: url('images/img_tree.gif');
+		background-position: right top;
+		background-repeat: no-repeat;
+		background-attachment: fixed; */
+		
+		/* 약식으로 배경 모두 설정 */
+		background: url('images/img_tree.gif') right top no-repeat fixed;
+	}
+	
+</style>
+<style>
+	div#top{
+		border-width : 1px;
+		border-style : solid;
+		border-color : gray;
+		
+		width: 25px;
+		height: 25px;
+		
+		position: fixed; /* 위치 고정 */
+		right: 5px;
+		bottom: 5px;
+	}
+	div#top:hover{
+		background: black;
+		color: yellow;
+		font-weight: bold;
+		cursor: pointer;
+	}
+</style>
+
+</head>
+<body>
+<!-- #top{top}+h3{css 배경이미지}+lorem+p*50>{.} -->
+<div id="top">top</div>
+<h3>css 배경이미지</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eum iure et numquam voluptates quia itaque quisquam sit quos nulla reprehenderit perferendis maiores delectus expedita quidem possimus dignissimos saepe suscipit!
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+<script>
+	var btnTop = document.getElementById("top");
+	btnTop.onclick = function(){
+		/* alert("탑!") */
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+		
+	}
+	
+</script>
+</body>
+</html>
+
+/* 	body{
+		background-color: red;
+		background-image: url('images/paper.gif');
+		/* 배경이미지가 기본은 가로/세로 반복해서 전체를 덮는다. */
+		background-repeat: no-repeat;
+		/* 배경 이미지 반복 */
+		/* background-position: right bottom; */
+		background-position: right top;
+		
+		background-attachment: fixed;
+		/* 배경이미지 고정 */
+		} */

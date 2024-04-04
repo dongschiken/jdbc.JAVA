@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	.imgbox{
+		width: 120px;
+		border: 1px solid gray;
+		padding: 6px;
+		margin: 4px;
+		display: inline;
+		text-align: center;
+		float: left;
+	}
+
+	.imgbox img{
+		width: 100%;
+	}
+	
+</style>
+</head>
+<body>
+<h3>
+	display, visibility 속성의 차이점
+	1. display : 공간 차지를 없애는것
+	2. visibility : 공간은 남기고 보이지 않게 하는 것 (사라져도 레이아웃에 영향을 미친다.)
+</h3>
+
+<!-- #imgbox$.imgbox*3>{Box$}+img+button -->
+<div id="imgbox1" class="imgbox">
+	Box1<img src="../images/img_5terre.jpg" alt="" />
+<button>Remove</button>
+</div>
+<div id="imgbox2" class="imgbox">
+	Box2<img src="../images/img_lights.jpg" alt="" />
+	<button>Hide</button>
+</div>
+<div id="imgbox3" class="imgbox">
+	Box3<img src="../images/img_forest.jpg" alt="" />
+	<button>ResetAll</button>
+</div>
+
+
+<script>
+	// 이미지 박스1에 있는 button
+	$("#imgbox1 button").click(function(){
+		/* alert("remove"); */
+		// style.display = "none"
+		/* $("#imgbox1").css("display", "none"); */
+		$("#imgbox1").hide();
+	});
+	
+	$("#imgbox2 button").click(function(){
+		/* alert("hide"); */
+		$(this).parent().css("visibility", "hidden");
+	});
+	
+	$("#imgbox3 button").click(function(){
+		/* alert("resetAll"); */
+		$("#imgbox1").show();
+		$("#imgbox2").css("visibility", "visible");
+	});
+</script>
+</body>
+</html>

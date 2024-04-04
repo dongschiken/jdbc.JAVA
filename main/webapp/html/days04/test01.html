@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<style>
+	head, body{
+		margin: 0;
+		padding: 0;
+	
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		overflow: hidden;
+		
+	}
+	ul li a{
+		display: block;
+		text-decoration: none;
+		background-color: #333;
+		color: white;
+		padding: 16px;
+	}
+	ul li{
+		float: left;
+	}
+	
+	ul li:last-child{
+		float: right;
+	}
+	ul li a:hover:not(.active){
+		color: white;
+		background-color: orange;
+	}
+	ul li a.de{
+		background-color: red;
+	}
+	ul li a.active {
+		background-color: #AADDD6;
+	}
+	
+	
+	
+	
+	
+
+
+</style>
+</head>
+<body>
+	<ul type="disc">
+	<li id="de"><a href="#" class="de">Home</a></li>
+	<li><a href="#" class="active">News</a></li>
+	<li><a href="#">Content</a></li>
+	<li><a href="#">About</a></li>	
+	</ul>
+</body>
+</html>

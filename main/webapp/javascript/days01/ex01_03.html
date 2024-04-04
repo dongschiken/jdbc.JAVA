@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+	.box{
+		color: red;
+		font-size: 32px;
+		border: 1px solid gray;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	html 요소의 속성을 js로 변경
+	1. 글색상
+	2. 글크기
+	3. 테두리
+	
+	마우스를 올릴때 -> mouseover 이벤트
+  </xmp>
+  <p id="demo">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi voluptate accusamus similique asperiores maxime tempore 
+	repudiandae beatae nisi cumque perspiciatis fugiat nesciunt. Iure debitis dolor labore quod nihil. Sequi debitis.
+  </p>
+</div>
+<script>
+	document.querySelector("#demo").onmouseover = function(){
+		/* console.log("mouseover envent....."); */
+		/* alert( this ); */
+		
+		/*
+		this.style.color = "red";
+		this.style.fontSize = "32px";
+		this.style.border = "1px solid gray";
+		*/
+		//console.log(this.getAttribute("class"));
+		/* class 속성에 box를 추가 */
+		//this.setAttribute("class", "box");
+		
+		/* 요소 속성 얻어올 때 : getAttribute("속성명")
+		   요소 속성 설정할 때 : setAttribute("속성명", "속성값")
+		   요소 속성 제거할 때 : removeAttribute("속성명")
+		   요소에게 x속성을 가지고 있니? : boolean hasAttribute("속성명");
+		   
+		   classList 속성을 사용해서 add() == 클래스 속성 추가 // remove() == 클래스 속성 제거 // replace() == 클래스 속성 재설정
+		
+		*/
+		
+		this.classList.add("box");
+		/* this.classList.replace("box", "box2");
+		this.classList.remove("box"); */
+		
+	}
+	
+
+</script>
+
+</body>
+</html>

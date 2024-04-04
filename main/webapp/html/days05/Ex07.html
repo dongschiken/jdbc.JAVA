@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<pre>
+	html 그래픽 처리 - canvas, svg
+	└ js를 사용해서 그래픽 처리
+	└ canvas 그래픽의 컨테이너 역할
+	└ 그리기(원, 사각형, 텍스트, 이미지 등등)
+	└ 너비, 높이 지정, id 속성 필수
+</pre>
+
+<canvas id="mycanvas" width="200" height="100" style="border: 1px solid #000"></canvas>
+<script>
+	const c = document.getElementById("mycanvas");
+	const ctx = c.getContext("2d");
+	
+	// 선
+	ctx.moveTo(0, 0);
+	ctx.lineTo(200, 100);
+	ctx.stroke();
+	// 원( 호 )
+	ctx.beginPath();
+	ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+	ctx.stroke();
+	
+	// 텍스트
+	ctx.font = "30px Arial";
+	ctx.strokeText("Hello World", 10, 50);
+	
+</script>
+</body>
+</html>

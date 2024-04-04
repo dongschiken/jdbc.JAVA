@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	div{
+		width: 300px;
+		height: 100px;
+		background-color: yellow;
+		border: 1px solid;
+	}
+	
+	div#box{
+		/* 3D 변환(transform) */
+		/* transform: rotateX(150deg); */
+		/* transform: rotateY(100deg); */
+		/* transform: rotateZ(100deg); */
+		transform: rotate3d(x, y, z, 45deg);
+		
+	}
+	
+	
+	
+</style>
+</head>
+<body>
+<pre>
+	
+	[ CSS 3D 변환 ]
+	-transform 속성
+	1. 이동 : translate3d(x, y, z)
+	2. 회전 : rotateX(), rotateY(), rotateZ(), rotate3d(x, y, z)
+	3. 크기 : scaleX(), scaleY(), scaleZ(), scale3d(x, y, z)
+	4. 
+</pre>
+<button>회전시작</button>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<div>Lorem ipsum dolor sit.</div>
+<div id="box">Lorem ipsum dolor sit.</div>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+
+<script>
+	var angle = 1;
+	var timer;
+	
+	document.querySelector("button").onclick = function(){
+		timer = setInterval(() => {
+			let target = document.querySelector("#box");
+			/* target.style.transform = "rotateZ("+angle+"deg)"; */
+			/* target.style.transform = "rotateX("+angle+"deg)"; */
+			target.style.transform = "rotateY("+angle+"deg)";
+			angle++;
+		}, 10);	
+		
+	}
+</script>
+</body>
+</html>

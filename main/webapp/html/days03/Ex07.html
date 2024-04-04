@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<style>
+	table, th, td{
+		/* border: solid 1px black; */
+		border: 1px solid #ddd;
+	}
+	table{
+		/* background-color: #96D4D4; */
+		/* border-spacing: 10px; */
+		width: 100%;
+		border-collapse: collapse;
+	}
+	th, td{
+		/* background-color: #96D4D4; */
+	}
+	/* 이런식으로 짝수만 값을 매길 수 있다.  */
+	tbody tr:nth-child(odd){
+		background-color: #96D4D4;
+	}
+</style>
+<style>
+	
+</style>
+</head>
+<body>
+	[table] 테이블 태그
+	- 데이터를 행과 열로 출력(테이블 형태로)
+	- 행(row) table row == tr
+	- 열(column) table data == tb == cell
+deptno   dname           loc	<- ( th : table header)     
+10	    ACCOUNTING   NEW YORK<br>   
+20	   	RESEARCH   	 DALLAS<br>      
+30	   	SALES   	 CHICAGO<br>         
+40	   	OPERATIONS   BOSTON<br>
+<!-- cellspacing : 셀과 셀의 거리 
+	 cellpadding : 셀과 내용물 (dname, deptno..)의 거리
+ -->
+<table>
+	<tr>
+		<td>deptno</td>
+		<td>dname</td>
+		<td>loc</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>ACCOUNTING</td>
+		<td>NEW YORK</td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>RESEARCH</td>
+		<td>DALLAS</td>
+	</tr>
+	<tr>
+		<td>30</td>
+		<td>SALES</td>
+		<td>CHICAGO</td>
+	</tr>
+	<tr>
+		<td>40</td>
+		<td>OPERATIONS</td>
+		<td>BOSTON</td>
+	</tr>
+</table>   
+
+
+<!-- <table border="1" style="width:100%">
+	<tr>
+		<td width=20%>deptno</td>
+		<td width=50%>dname</td>
+		<td width=30%>loc</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>ACCOUNTING</td>
+		<td>NEW YORK</td>
+	</tr>
+	<tr>
+		<td>20</td>
+		<td>RESEARCH</td>
+		<td>DALLAS</td>
+	</tr>
+	<tr>
+		<td>30</td>
+		<td>SALES</td>
+		<td>CHICAGO</td>
+	</tr>
+	<tr>
+		<td>40</td>
+		<td>OPERATIONS</td>
+		<td>BOSTON</td>
+	</tr>
+</table>      --> 
+</body>
+</html>

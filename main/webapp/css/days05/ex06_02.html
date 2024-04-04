@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	.grid-container{
+		background-color: green;
+		padding: 10px;
+		
+		display: grid;
+		/* 모든 직계 자식 항목은 자동으로 그리드 항목이 된다. */
+		/* display: inline-grid */
+		
+		/* grid-tamplate-columns 속성
+		   그리드의 레이아웃의 열의 갯수를 정의하고
+		   열의 너비를 정의 하는 속성
+		 */
+		 grid-template-columns: auto auto auto auto;
+		 
+		 /* 행의 높이를 정의하는 속성 
+		 	grid-template-rows: 
+		 */
+		 grid-template-rows: 100px 200px 100px;
+		 
+		 
+		 /* 행과 행 사이의 간격 */
+		 /* column-gap: 50px; */
+		 
+		 /* 행과 행 사이의 간격 */
+		 /* row-gap: 30px; */
+	
+	
+	}
+	.grid-container .grid-item{
+		background-color: #f1f1f1;
+		border: 1px solid rgba(0,0,0,0.8);
+		padding: 20px;
+		font-size: 30px;
+		text-align: center;
+	}
+	/* .item1{
+		grid-column-start: 1;
+		grid-column-end: 3;
+	} */
+	
+	.item1{
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+</style>
+</head>
+<body>
+<pre>
+	[ css grid 배치 ]
+	css grid 레이아웃 모듈은
+	행, 열 있는 그리드( 격자 무늬 ) 기반
+	레이아웃 시스템.
+	
+	float, position 레이아웃
+	- grid 장점 : 위의 레이아웃 보다 배치하는 것이 더 쉽고, 유지보수도 더 쉽다.
+</pre>
+ <div class="grid-container">
+ 	<div class="grid-item item1">1</div>
+ 	<div class="grid-item">2</div>
+ 	<div class="grid-item">3</div>
+ 	<div class="grid-item">4</div>
+ 	<div class="grid-item">5</div>
+ 	<div class="grid-item">6</div>
+ 	<div class="grid-item">7</div>
+ 	<div class="grid-item">8</div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+/* 반응형 웹 : 모든 장치  */
+* {
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+	div#nav, div#article {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+body {
+	/* 글꼴은 보통 외부에서 링크로 받아온다. */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div#header {
+	background-color: #666;
+	color: white;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+}
+
+div#footer {
+	background-color: #777;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 25px;
+}
+
+div#section {
+	border: 1px solid red;
+}
+
+div#nav {
+	width: 30%;
+	background-color: #ccc;
+	float: left;
+	padding: 20px;
+}
+
+div#article {
+	width: 40%;
+	background-color: #f1f1f1;
+	float: left;
+	height: 500px;
+	padding: 20px;
+}
+
+div#section::after {
+	content: "";
+	display: table;
+	/* 뒤에 따라오는놈을 clear한다. */
+	clear: both;
+}
+
+div#section {
+	background-color: #ccc;
+}
+</style>
+</head>
+<body>
+
+
+	<h2>div(layout)+css</h2>
+	<div id="header">
+		<h2>Cites-시멘틱태그(sementic elements)</h2>
+	</div>
+	<div id="section">
+		<div id="nav">
+			<ul>
+				<li><a href="#">London</a></li>
+				<li><a href="#">Paris</a></li>
+				<li><a href="#">Seoul</a></li>
+			</ul>
+		</div>
+		<div id="article">
+			<h2>Lodon</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Eligendi optio consectetur ratione sunt soluta praesentium delectus
+				fugit cumque repellendus placeat laudantium vero eveniet ab maxime
+				enim quaerat inventore! Repellendus reprehenderit.</p>
+			<p>Ad quas eos est facere quo doloremque iure vel illum facilis
+				eius at dolore fugit debitis unde saepe qui porro aut quam
+				asperiores quos tempore ex deleniti minus provident magni?</p>
+
+			<h2>Paris</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+				aut dolorum rerum quisquam? Reprehenderit delectus fuga praesentium
+				nisi id nulla dolore doloremque veritatis sapiente minima quod
+				molestias. Possimus cumque enim.</p>
+			<p>Quasi a cumque sapiente vitae iste nobis suscipit? Pariatur
+				asperiores deserunt vero praesentium possimus quaerat est nisi porro
+				enim ducimus cupiditate repellat neque! Laboriosam magni magnam
+				expedita cupiditate voluptates reprehenderit.</p>
+			<h2>Seoul</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Voluptate eaque quas id ipsam soluta tempore temporibus suscipit
+				quae quaerat perspiciatis velit minima nihil ut repellat incidunt
+				accusamus neque et accusantium.</p>
+			<p>Sit nostrum quisquam sed animi cupiditate voluptates rerum
+				accusantium facere quod totam ipsum commodi neque natus quidem
+				ducimus cumque dolorum aperiam modi adipisci minus et sapiente
+				tenetur doloremque repellendus dicta!</p>
+
+		</div>
+	</div>
+	<div id="footer">
+		<h2>Footer</h2>
+	</div>
+
+	<!-- h2{div(layout)+css}+div[id=header]>h2{Cites-시멘틱태그(sementic
+	elements)}+(div[id=section]>div[id=nav]>ul>+li*3>(a{London}+a{Paris}+a{Seoul}))+div[id=article]>(h2{London}+p*2>lorem)+(h2{Paris}+p*2>lorem)+(h2{Seoul}+p*2>lorem)
+ -->
+
+
+</body>
+</html>

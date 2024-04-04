@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<style>
+	table{
+		width:100%;
+		
+	}
+	table, td, th{
+		border: 1px solid gray;
+	}
+	th{
+		text-align: left;
+	}
+</style>
+</head>
+<body>
+	<h3>수직 테이블 헤더</h3>
+	
+	<table>
+		<tr>
+			<!-- colspan, rowspan -->
+			<td rowspan="2">FirstName</td>
+			<td>Jill</td>
+			<td>Eve</td>
+		</tr>
+		<tr>
+			<!-- <td>LastName</td> -->
+			<td>Smith</td>
+			<td>Jackson</td>
+		</tr>
+		<tr>
+			<td>Age</td>
+			<td>25</td>
+			<td>32</td>
+		</tr>
+	</table>
+
+<br>
+
+	<table>
+		<tr>
+			<td colspan="2">FirstName</td>
+			<td>Jill</td>
+			<td>Eve</td>
+		</tr>
+		<tr>
+			<td>LastName</td>
+			<td>Smith</td>
+			<td>Jackson</td>
+		</tr>
+		<tr>
+			<td>Age</td>
+			<td>25</td>
+			<td>32</td>
+		</tr>
+	</table>
+</body>
+</html>

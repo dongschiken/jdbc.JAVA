@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	.center{
+		border: 3px solid #72ad21;
+		width: 50%;
+		height: 200px; 
+		
+		text-align: center;
+
+		position: relative;
+		margin: auto;
+		
+	}
+	.center p{
+	
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: 0;
+		
+		background-color: yellow;
+		
+		/* 변형시키다, 좌표를 변환시키다. */
+		transform: translate(-50%, -50%);
+		
+	}
+</style>
+</head>
+<body>
+<h3>
+	세로(수직) 정렬 
+	1. 수직 중심에 위치시키고, transform속성 사용
+</h3>
+<div class="center">
+	<p>Hello World</p>
+</div>
+</body>
+</html>

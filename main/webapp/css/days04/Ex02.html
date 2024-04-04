@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	button{
+		background-color: red;
+		display: inline-block;
+		padding: 5px;
+		border: none;
+		color: white;	
+	}
+/* 	button:hover{
+		background-color: blue;
+	} */
+</style>
+</head>
+<body>
+<h3>마우스 롤오버 효과</h3>
+
+<button type="button">마우스 롤오버 효과</button>
+<button>마우스 롤오버 효과</button>
+<button>마우스 롤오버 효과</button>
+
+<script>
+/* 	let mouse = document.querySelector("button");
+	mouse.onmouseenter = function(){
+		this.style.backgroundColor = "blue";
+	}
+	mouse.onmouseout = function(){
+		this.style.backgroundColor = "red";
+	} */
+	
+	/* const mouse = document.querySelectorAll("button"); */
+	const mouse = document.getElementsByTagName("button");
+	/* alert(mouse.length); */
+	for (var i = 0; i < mouse.length; i++) {
+		mouse[i].onmouseover = function(){
+			event.srcElement.style.backgroundColor = "blue";
+		}
+		mouse[i].onmouseout = function(){
+			event.srcElement.style.backgroundColor = "red";
+		}
+	}
+</script>
+</body>
+</html>

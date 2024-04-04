@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+	
+	/* class="class명" 
+		└ 스타일시트에서 자주 사용.
+		└ js 특정클래스를 가진 요소를 찾아서 조작
+		└ 클래스명은 대소문자를 구분한다.
+		└ 숫자로 시작할 수 없다.
+		└ 중간에 공백을 포함할 수 없다.
+	
+	
+	
+	*/
+		
+	.team1{
+		background-color: yellow;
+	}
+	.team2{
+		background-color: green;
+	}
+	li.teamleader{
+		color: red;
+	}
+	
+	
+</style>
+</head>
+<body>
+<!-- class 속성 -->
+<!-- id는 고유한 이름(유일해야한다.) 
+	 class는 중복가능 -->
+<div id="고유한이름" class="class5">
+
+	<div class="team1">
+	<ul>
+		<li class="teamleader">김진성</li>
+		<li>유진</li>
+		<li>류영은</li>
+		<li>김영진</li>
+		<li>한재호</li>
+		<li>조연화</li>
+		<li>이시은</li>
+	</ul>
+	</div>
+	
+	
+	<div class="team2">
+	<ul>
+		<li class="teamleader">박우현</li>
+		<li>원대안</li>
+		<li>이동영</li>
+		<li>이동찬</li>
+		<li>강명건</li>
+		<li>권맑음</li>
+	</ul>
+	</div>
+	
+</div>
+<script>
+
+	/* 클래스명이 team2인 자식중에 ul 안에있는 li */
+	let team2List = document.querySelectorAll("div.team2 ul li");
+	
+	alert( team2List.length );
+	for( let i = 0; i < team2List.length; i++){
+		team2List[i].onclick = function(){
+			let parent = this.parentElement;
+			parent.removeChild(this);
+			
+		}
+		
+	}
+	
+	
+/* 	let myDiv = document.getElementById("myDiv"); 
+	let parent = myDiv.parentElement; // 부모 객체 알아내기 
+	parent.removeChild(myDiv);    // 부모로부터 myDiv 객체 제거하기 */
+
+	
+	
+</script>
+</body>
+</html>

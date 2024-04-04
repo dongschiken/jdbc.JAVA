@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+</head>
+<body>
+	<!-- img - 웹 페이지의 디자인과 모양을 향상시킬 수 있다.
+	이미지 태그는 인라인 모드( 옆으로 채워진다. )
+	html 폴더
+		└ images 폴더 추가
+	전체 프로젝트에 이미지 넣고싶을때는 webapp에 선언
+	각각의 폴더 안에서도 image 폴더를 만들어서 각각 관리
+	
+	이미지 태그를 사용할때 너비와 높이를 꼭 지정하자 이유? 
+	너비, 높이가 지정되지 않으면 이미지를 로딩하는 동안 웹 페이지가 깜박임(로딩이 길다)이 발생하기 때문이다.
+	 -->
+	 <!-- <img alt="이미지 대체할 텍스트 지정" src="이미지 URI "> -->
+	 <img alt="이탈리안 튤립." src="../images/pic_trulli.jpg">
+	 <hr>
+	 <!-- 너비 250(html은 지정안하면 px), 높이는 166.5px(너비나 높이를 줄이면 둘다 자동적으로 줄어듬) -->
+	 <img alt="이탈리안 튤립." src="../images/pic_trulli.jpg" width="250"><img alt="이탈리안 튤립." src="../images/pic_trulli.jpg" style="width: 250px">
+	 
+	 <hr>
+	 <!-- 너비 250(css는 지정안하면 오류가 발생한다.), 높이는 166.5px(너비나 높이를 줄이면 둘다 자동적으로 줄어듬) -->
+	 <img alt="이탈리안 튤립." src="../images/pic_trulli.jpg" style="width: 250px">
+	 
+	
+</body>
+</html>

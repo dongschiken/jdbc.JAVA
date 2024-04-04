@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	body{
+		color: blue;
+		background-color: lightgrey;
+	}
+	h3{
+		color: white;
+		background: black;
+		
+		text-align: center;
+	}
+	
+	div{
+		color: red;
+		direction: rtl;
+	}
+	
+	p#p1{
+		border: 1px solid black;
+		padding: 5px;
+		width: 250px;
+		height: 100px;
+		
+		/* 출력되는 텍스트의 행의 끝을 나란히 맞추겠다. */
+		text-align: justify;
+		overflow: hidden;
+	}
+</style>
+<style>
+ /* 텍스트 이미지에서의 수직 정렬 vertical-align */
+	img.a{ vertical-align: baseline; }
+	img.b{ vertical-align: text-top; }
+	img.c{ vertical-align: text-bottom; }
+	img.d{ vertical-align: sub; }
+	img.e{ vertical-align: super; }
+</style>
+</head>
+<body>
+<h3>CSS 텍스트</h3>
+<pre>
+	[css 텍스트 서식 지정]
+	1. 색상 : 표준색상, #16진수, rgb()
+	2. 정렬
+		text-align
+		text-align-last
+		direction
+		unicode-bidi
+		verical-align
+		
+</pre>
+
+<div>Lorem ipsum dolor sit amet.</div>
+
+<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quibusdam et sequi laborum architecto veritatis quisquam repellat dolorem optio exercitationem veniam quia adipisci perspiciatis earum esse minima quos itaque praesentium.</p>
+
+<p>Lorem ipsum<img src="images/sqpurple.gif" class="a" style="width:9px;height:9px" alt="" /> dolor sit amet.</p>
+<p>Optio illum consequatur<img src="images/sqpurple.gif" class="b" style="width:9px;height:9px" alt="" /> ea repellendus.</p>
+<p>Perspiciatis<img src="images/sqpurple.gif" class="c" style="width:9px;height:9px" alt="" /> voluptates voluptatibus fugit sequi.</p>
+<p>Alias veniam<img src="images/sqpurple.gif" class="d" style="width:9px;height:9px" alt="" /> eos harum et?</p>
+<p>Aspernatur quibusdam<img src="images/sqpurple.gif" class="e" style="width:9px;height:9px" alt="" /> fugit eveniet qui!</p>
+</body>
+</html>

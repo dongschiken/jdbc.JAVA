@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- url과 uri의 차이점 -->
+	 1. URL
+	 - 네트워크 상에서 자원이 어디있는지를 알려주기 위한 규약
+	 - 웹 페이지를 찾기위한 추소
+	 - Uniform Resource Locator
+	 
+	 예) http://localhost[:80]/webPro/html/days02/Ex08.html
+	 통신규약, 인터넷 서비스 유형을 정의 ) http, https
+	 	도메인 접두사 ( http:// 기본값 www )
+	 	.naver.com(도메인)
+	 scheme(http)://prefix.domain(localhost).port(80)/path/filename
+	
+	 네이버에서 홍길동 검색 URL	 
+	 예) https://search.naver.com/search.naver
+	 http보안([s]ecure)search.naver.com(도메인접두사/포트번호는 생략되어있음)
+	 // 요청 URL + 파라미터값 => QueryString
+	 	요청 방식 => GET 방식/ POST 방식
+	 ?
+	 where=nexearch
+	 &
+	 sm=top_hty
+	 &
+	 fbm=0
+	 &
+	 ie=utf8
+	 &
+	 query=%ED%99%8D%EA%B8%B8%EB%8F%99
+	 
+	 (기억) URL은 한글을 사용할 수 없다.
+	 	- 한글문자는 -> 변환 // %16진수값으로 변환되어서 URL에서 사용되어진다.
+	 	- 공백, +기호 		 // %16진수값으로 변환되어서 URL에서 사용되어진다. 
+	 	- URL은 ASCII코드값만 사용할 수 있다.
+	 
+	 URI : URL, URN의 상위개념
+	 scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
+	 		   [1               ]							[2 책갈피   ]
+	 		   
+</body>
+</html>

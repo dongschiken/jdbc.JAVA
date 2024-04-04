@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<pre>
+	[ 뷰포트 (viewport) ]
+	1. 웹 페이지에서 사용자가 화면상에 볼 수 있는 영역
+	2. 여러 디바이스( 스마트폰, 태블릿, 컴퓨터 등등 )
+	3. 여러 장치의 크기에 맞게 웹 페이지의 크기를 제어해서 화면에 보여 줄 필요가 있다.
+	4. 뷰포트 설정
+</pre>
+
+<pre>
+	[ css 미디어 쿼리 ]
+	- css3에 도입된 css 기술( 규칙 )
+	- 여러 장치 마다 서로 다른 스타일을 적용할 필요가 있어서 -> 반응해서 웹 표시 되도록 하는 기술
+	- 미디어 쿼리는 
+		1) 뷰포트의 너비와 높이 ( 확인 )
+		2) 뷰포트의 방향 ( 가로 / 세로 )
+	- 미디어 쿼리를 사용해서 여러 장치에 맞는 스타일 시트를 제공하는 기술
+	- 미디어 쿼리를 사용하는 구문 형식
+		1) 미디어 타입 - all, screen, print
+		2) 미디어 유형 - max-width, min-height, max-height, min-height width, height, orientation
+		@media not|only 미디어 타입 and (미디어 유형) and
+		
+		링크태그로 다양한 미디어, 브라우저 창 설정 가능하다.
+<link rel="stylesheet" media="print" href="print.css">
+<link rel="stylesheet" media="screen" href="screen.css">
+<link rel="stylesheet" media="screen and (min-width: 480px)" href="example1.css">
+<link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="example2.css">
+</pre>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+	.box1{
+		border: 3px solid #73ad21;
+		/* 블럭모드 너비 100%  float: left에 의해서 무너진다.*/
+		float: left;
+		padding: 10px;
+	}
+	.box2{
+		border: 3px solid red;
+		/* box1의 float 속성에 영향을 받아서 왼쪽, 오른쪽의 속성 적용받는다. */
+		/* 이때 속성에 영향을 받지 않고 싶을때 clear 속성을 사용 
+			clear 속성
+			- none
+			- left
+			- right
+			- both
+			- inherit
+		*/
+		clear: left;
+	}
+</style>
+</head>
+<body>
+
+<div class="box1">box1</div>
+<div class="box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci incidunt non deleniti quae error provident itaque omnis quaerat facere odit repudiandae ullam dolorum aut eos tempore modi iste libero reprehenderit.</div>
+</body>
+</html>

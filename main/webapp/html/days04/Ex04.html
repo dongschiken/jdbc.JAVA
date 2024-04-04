@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	<!-- Zen Coding == Emmet -->
+<!-- ctrl + E 에밋 단축키 -->
+
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<!-- div>ul>li*5>{item$} -->
+<div>
+	<ul>
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+		<li>item5</li>
+	</ul>
+</div>
+
+<!-- div>ul>li*5>{item$$} -->
+<div>
+	<ul>
+		<li>item01</li>
+		<li>item02</li>
+		<li>item03</li>
+		<li>item04</li>
+		<li>item05</li>
+	</ul>
+</div>
+
+<div>
+Lorem ipsum dolor sit amet, 
+consectetur adipisicing elit. 
+Praesentium rem libero quo cumque 
+consequatur minus atque modi voluptate
+dignissimos saepe officia expedita nisi 
+explicabo tempore temporibus maxime repudiandae earum optio!
+</div>
+
+<div>Lorem ipsum dolor.</div>
+
+<!-- div[id="demo"] -->
+ <div id="demo"></div>
+
+<!-- div[class="mycontainer"] -->
+<div class="mycontainer"></div>
+
+<!-- div[id="demo" class="mycontainer"] -->
+<div id="demo" class="mycontainer"></div>
+
+<!-- #demo.mycontainer / #은 id명, .은 클래스명 -->
+<div id="demo" class="mycontainer"></div>
+
+<!-- #demo.mycontainer.classb.box -->
+<div id="demo" class="mycontainer classb box"></div>
+
+<!-- img[width=100px height=100px] -->
+<img src="" alt="" width="100px" heigh=t"100px" />
+
+<!-- ul>li.box*5>{item$} -->
+<ul>
+	<li class="box">item1</li>
+	<li class="box">item2</li>
+	<li class="box">item3</li>
+	<li class="box">item4</li>
+	<li class="box">item5</li>
+</ul>
+
+<!-- ul>li.box$*5>{item$} -->
+<ul>
+	<li class="box1">item1</li>
+	<li class="box2">item2</li>
+	<li class="box3">item3</li>
+	<li class="box4">item4</li>
+	<li class="box5">item5</li>
+</ul>
+
+
+<!-- ul>li.box$@-*5>{item$}  $@-는 역순으로 정렬(DESC) -->
+<ul>
+	<li class="box5">item1</li>
+	<li class="box4">item2</li>
+	<li class="box3">item3</li>
+	<li class="box2">item4</li>
+	<li class="box1">item5</li>
+</ul>
+
+
+<!-- ul>li*5>{item$@7} @7 : 시작번호가 7부터 시작 -->
+<ul>
+	<li>item7</li>
+	<li>item8</li>
+	<li>item9</li>
+	<li>item10</li>
+	<li>item11</li>
+</ul>
+
+<!-- a{텍스트} -->
+<a href="">텍스트</a>
+
+
+<!-- p{Click}>a{here}+{to continue} -->
+<p>Click<a href="">here</a>to continue</p>
+
+<!-- table[style="border:solid 1px gray; width:1000%"]>(tr>td*4>lorem1)*3 -->
+<table style="border:solid 1px gray; width:1000%">
+	<tr>
+		<td>Lorem.</td>
+		<td>Reprehenderit.</td>
+		<td>Aliquid.</td>
+		<td>Ullam?</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Delectus!</td>
+		<td>Sit.</td>
+		<td>Quis.</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Voluptatem?</td>
+		<td>Odit!</td>
+		<td>Fuga.</td>
+	</tr>
+</table>
+
+
+
+
+<!-- 에밋 ">"연산자 : 부모레벨의 요소 만들기 -->
+<div>
+	<p></p>
+</div>
+<!-- 에밋 "+"연산자 : 형제레벨의 요소 만들기 -->
+<div></div>
+<p></p>
+
+<!-- div+ul>li*3>lorem1 -->
+<div></div>
+<ul>
+	<li>Lorem.</li>
+	<li>Quidem!</li>
+	<li>Perspiciatis.</li>
+</ul>
+
+<!-- div+ul+ol+p+bq -->
+<div></div>
+<ul></ul>
+<ol></ol>
+<p></p>
+<blockquote></blockquote>
+
+
+<!-- (div>ul>li)+p -->
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+<p></p>
+
+<!-- div>ul>li^^p  ^는 상위태그로 간다는 의미-->
+<div>
+	<ul>
+		<li></li>
+	</ul>
+</div>
+<p></p>
+
+<!-- (div>ul>li*3)*2 -->
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+
+
+<!-- ul*2>li*4 == (ul>li*4)*2-->
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+
+<!-- div+(div>p>span)+em>bq -->
+<div></div>
+<div>
+	<p><span></span></p>
+</div>
+<em>
+	<blockquote></blockquote>
+</em>
+
+<!-- div>(header>ul>li*2>a)+footer>p -->
+<div>
+	<header>
+		<ul>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</header>
+	<footer>
+		<p></p>
+	</footer>
+</div>
+
+
+
+</body>
+</html>

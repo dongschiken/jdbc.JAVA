@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<pre>
+	- html 페이지에 비디오를 재생하는 가장 쉬운 방법 : YouTube 사용
+	- YouTube 동영상을 저장/재생할 ID 표시
+	- ID를 사용해서 html 코드에 동영상을 참조해서 사용
+</pre>
+<pre>
+	[순서]
+	1. YouTube 동영상 업로드
+	2. 동영상 ID 저장
+	3. iframe 태그 사용
+		└ src 속성이 동영상URL 설정
+	4. 너비, 높이 크기 설정
+	5. 여러가지 설정들을 동영상URL 추가 설정할 수 있다.
+</pre>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
+<!-- loop=1 무한반복 / =0 한번  --><!-- controls=1, 0 -->
+<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?loop=1&controls=0"></iframe>
+
+<!-- 
+	[ html APIs ]
+   1. Geolocation ( 위치 정보 )
+   2. Drag/Drop ( 드래그/드롭 )
+   3. Web Storage( 웹 저장소)
+   4. WEb Workers( 웹 작업자)
+   5. SSE 
+   -->
+
+</body>
+</html>

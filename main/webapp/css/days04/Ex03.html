@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	*{
+		box-sizing: border-box;
+		
+	}
+	/* input{ */
+	/* input[type]{ */
+	/* input[type="submit"]{ */
+	/* [title=flower]{ */
+	/* [title^=flower]{ */
+	/* [title$=flower]{ */
+	/* [title*=flower]{ */
+	[title~=flower]{
+		width: 200px;
+		border: 1px solid red;
+	}	
+</style>
+</head>
+<body>
+<pre>
+	[ css 선택자를 속성(attribute) 사용 ]
+	1. 속성명만 사용 => input[type] (<!-- <input><br>  -->이 태그는 type속성을 가지고 있지 않아서 스타일에서 제외된다.)
+	2. 속성명 = 속성값
+	3. 속성명 ^= 속성값 => WHERE title LIKE 'flower%';  // 플라워로 시작하는 속성
+	4. 속성명 $= 속성값 => WHERE title LIKE '%flower';  // 플라워로 끝나는 속성
+	5. 속성명 *= 속성값	=> WHERE title LIKE '%flower%'; // 플라워가 있는 모든 속성
+	6. 속성명 ~= 속성값 =>  						    // 한 개의 단어가 플라워인 속성
+	7. 속성명 |= 속성값 => 
+	
+</pre>
+<a href="#" title="klematis flower">naver</a>
+<a href="#" title="flower">daum</a>
+<a href="#" title="kbsflower">sist</a>
+<a href="#" title="kbs-flower">taeyo</a>
+<a href="#" title="flowers">admin</a>
+
+<hr>
+
+<input><br>
+<input><br>
+
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="submit"><br>
+<input type="reset"><br>
+</body>
+</html>

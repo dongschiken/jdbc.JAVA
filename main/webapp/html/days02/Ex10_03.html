@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script>
+	// javascript 메서드 선언
+	function myAlert(message){
+		window.alert(message);
+	}
+	function bookmark(){
+		// 암기
+		// js를 사용해서 페이지를 이동
+		var url = "http://localhost/webPro/html/days02/Ex10_02.html#desc";
+		// BOM
+		// window.location.href = url; 여기서도 " window. "생략
+		location.href = url; // js에서 다른페이지로 이동하기 위해서 location.href 사용
+	}
+</script>
+</head>
+<body>
+	a 링크 태그
+	- js 처리 : 경고창 띄우기.
+	- js 내장된 브라우저 객체(BOM) : window 객체
+	- js 문자열
+	
+	속성명 = "속성값"
+	속성명 = '속성값'
+	속성명 =  속성값
+	<!-- 이렇게 3개다 사용 가능 -->
+	<a href= 'javascript:window.alert("경고창 띄우기");'> 경고창 띄우기 </a>
+	
+	<br>
+	<!-- window는 최상위 부모 객체라서 생략가능하다.  -->
+	<a href= 'javascript:alert("경고창 띄우기");'> 경고창 띄우기 </a>
+	
+	<br>
+	<a href= 'javascript:myAlert("경고메시지");'> 경고창 띄우기 </a>
+	
+	<br>
+	<a href= 'mailto:admin@sist.com'>관리자</a>
+	
+	<a href= 'javascript:bookmark()'>북마크 구현</a>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="Ex02_style.css">
+<!-- 외부 css 적용 방법 -->
+</head>
+<style>
+	/* 내부 css 적용 방법 */
+</style>
+<body>
+<pre>
+	[css 특이성]
+	- 동일한 요소를 가리키는 두개 이상의 css 규칙이 있는 경우
+	가장 높은 특이성을 가진 선택자에 의해 css 적용된다.
+	- 특이성 ? 스타일 적용 점수/우선 순위
+	- (암기)
+		└ 태그명 1점
+		└ 클래스명 10점
+		└ 아이디명 100점
+		└ 태그명 + 아이디명 101점
+		└ 태그명 + 아이디명 + 클래스명 111점
+		
+		인라인 css 적용 방식 : 1000점
+		<pre style="background-color:red;"></pre>
+		
+</pre>
+<pre>
+	css 선택자(selector)
+	1. 태그명( p, a등등)
+	2. #ID명
+	3. .클래스명
+</pre>
+
+<p id="first" class="first">Lorem ipsum dolor sit amet.</p>
+<p class="last">Quos repudiandae sequi dolorum quia.</p>
+
+
+<div>Lorem ipsum dolor sit.</div>
+<div>Sed qui sunt fuga!</div>
+<div>Maiores architecto distinctio reiciendis.</div>
+<div class="last">Deleniti enim error numquam!</div>
+
+</body>
+</html>

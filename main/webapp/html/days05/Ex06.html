@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- http://localhost/webPro/html/days05/Ex06_ok.jsp?uid=hong&pwd=1234&email=hong%40sist.com -->
+<form action="Ex06_ok.jsp" id="form1" method="get" target="self" enctype="application/x-www-form-urlencoded">
+
+아이디 : <input type="text" id="uid" value="hong" name="uid"><br>
+비밀번호 : <input type="password" id="pwd" value="1234" name="pwd"><br>
+<!-- 첨부파일이 있을경우 엔코딩은 반드시 formenctype을 multipart/form-data로 설정-->
+  <input type="submit"														
+  formaction="ex100_ki.jsp" formmethod="post" formtarget="_black" formenctype="multipart/form-data">
+</form>
+<input type="email" value="hong@sist.com" name="email" id="email" form="form1">
+<br>
+<select>
+	<optgroup label="국산차">
+	<option>K09</option>
+	<option>G80</option>
+	</optgroup>
+	
+	<optgroup label="외제차">
+	<option>Volvo</option>
+	<option>BMW</option>
+	</optgroup>
+	
+
+</select>
+</body>
+</html>

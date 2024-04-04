@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	.container{
+		position: relative;	
+	}
+	.blackbox{
+		position: absolute;;
+		border: 2px solid black;
+		height: 100px;
+		margin: 30px;
+	}
+	.graybox{
+		position: absolute;
+		left: 50px;
+		top: 50px;
+		
+		background-color: lightgray;
+		height: 60px;
+		width: 70%;
+	}
+	
+	.greenbox{
+		position: absolute;
+		left: 270px;
+		top: -15px;
+		
+		height: 100px;
+		background-color: green;
+	}
+</style>
+</head>
+<body>
+<pre>
+	z-index 속성 : 요소가 배치되면 다른 요소와 겹칠 수 있다.
+	위/아래 겹치는 순서를 지정하는 속성.
+	양수, 음수를 가질 수 있다.
+	
+</pre>
+
+<div class="container">
+   <div class="blackbox">Black Box</div>
+   <div class="graybox">Gray Box</div>
+   <div class="greenbox">Green Box</div>
+</div>
+
+</body>
+</html>

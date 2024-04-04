@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	#panel, .flip{
+		font-size: 16px;
+		pdding: 10px;
+		background-color: #4acf50;
+		color: white;
+		text-align: center;
+		margin: auto;
+		border: 1px solid #a6d8a8;
+	}
+	
+	.panel{
+		 display: none; 
+	}
+	
+	.flip:hover{
+		cursor: pointer;	
+		color: red;
+	}
+</style>
+</head>
+<body>
+<!-- p.flip>{Click to show panel}^#panel>p*3>lorem -->
+<p class="flip">Click to show panel</p>
+<div class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque officiis praesentium in fugit nostrum natus ut cum dicta! Nostrum pariatur asperiores sapiente similique natus eveniet obcaecati dolores molestiae aspernatur eum.</p>
+</div>
+<p class="flip">Click to show panel</p>
+<div class="panel">
+	<p>Alias sequi quibusdam veniam laudantium repellat perferendis reiciendis cupiditate consectetur. Minima dolor esse distinctio rem tempora unde voluptatum nostrum itaque ipsa dolorem voluptas temporibus magni rerum expedita asperiores quae ad!</p>
+	</div>
+<p class="flip">Click to show panel</p>
+<div class="panel">
+		<p>Laudantium possimus aspernatur ad veniam maiores enim esse nam quo illum laborum voluptatibus repudiandae accusantium tempore illo earum. Ut tempora debitis veniam quidem nemo eos voluptas. Repudiandae quia mollitia quis.</p>
+</div>
+<p class="flip">Click to show panel</p>
+<div class="panel">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque officiis praesentium in fugit nostrum natus ut cum dicta! Nostrum pariatur asperiores sapiente similique natus eveniet obcaecati dolores molestiae aspernatur eum.</p>
+	<p>Alias sequi quibusdam veniam laudantium repellat perferendis reiciendis cupiditate consectetur. Minima dolor esse distinctio rem tempora unde voluptatum nostrum itaque ipsa dolorem voluptas temporibus magni rerum expedita asperiores quae ad!</p>
+	<p>Laudantium possimus aspernatur ad veniam maiores enim esse nam quo illum laborum voluptatibus repudiandae accusantium tempore illo earum. Ut tempora debitis veniam quidem nemo eos voluptas. Repudiandae quia mollitia quis.</p>
+</div>
+XXX
+
+<script>
+	
+	$("div.panel").hide();
+	
+	
+/* 	$("p.flip").click(function(){
+		$(this).children().toggle();
+	}); */
+	
+	$("p.flip").on("click", function(){
+		$(this).not(this).removeClass("panel");
+		$(this).next().toggle();
+		
+	});
+	
+</script>
+</body>
+</html>

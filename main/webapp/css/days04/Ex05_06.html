@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	div{
+		border: 10px dotted;
+		padding: 35px;
+		background: yellow url('../images/img_flwr.gif') no-repeat;
+	}
+	body >#demo1{
+		background-origin: padding-box; /* 기본값 */
+		background-clip  : padding-box;
+	}
+	body > #demo2{
+		background-origin: border-box; /* 기본값 */
+		background-clip  : border-box;	
+	}
+	body > #demo3{
+		background-origin: content-box;
+		background-clip  : content-box;
+	}
+</style>
+</head>
+<body>
+<pre>
+	[background-origin 속성]
+	- 배경 이미지의 위치를 지정하는 속성
+	  (background-position 속성과 차이점)
+	- 속성값
+	  1) border-box
+	  2) padding-box ( 기본값 )
+	  3) content-box  
+	[background-clip 속성]
+	- 배경의 페인팅 영역을 지정하는 속성
+	  1) border-box ( 기본값 ) 
+	  2) padding-box
+	  3) content-box
+</pre>
+
+<div id="demo1">
+	<h1>Lorem ipsum dolor sit amet.</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ducimus optio facilis ipsum nihil officiis quam enim suscipit a? Ut accusamus animi eius iste expedita tempore nulla adipisci corrupti culpa?</p>
+</div>
+<br>
+<div id="demo2">
+	<h1>In molestias quis expedita quidem.</h1>
+	<p>Ab illo quos dolorem voluptatibus dignissimos. Est repudiandae delectus laudantium aspernatur inventore unde molestiae quo facere perspiciatis porro atque molestias velit soluta consequuntur dolor! Quos voluptatem dolorum id tempore nisi?</p>
+</div>
+<br>
+<div id="demo3">
+	<h1>Alias ullam doloremque blanditiis quo.</h1>
+	<p>Alias rem numquam sit eaque adipisci tempora ullam! Debitis accusantium eaque et eos deleniti incidunt. Placeat libero itaque velit sequi aperiam quibusdam atque aliquam necessitatibus praesentium quaerat voluptate dolor nihil.</p>
+</div>
+
+</body>
+</html>

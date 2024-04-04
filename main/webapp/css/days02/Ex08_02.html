@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	.box{
+	border : 1px solid gray;
+	width : 100px;
+	height : 100px;
+	text-align : center;
+	}
+	
+	
+</style>
+</head>
+<body>
+<!-- <div class="box">Box - 1</div> -->
+
+
+
+<script>
+	// js를 사용해서 div 객체 생성
+	
+	// 1. <div></div> 요소 생성
+	const divElement = document.createElement("div");
+	
+	// 2. <div>Box - 1</div> 요소 생성 : innerText, innerHtml
+	divElement.innerText = "Box - 1";
+	
+	// 3. 부모 요소를 얻어와서 자식으로 생성된 div를 추가
+	document.body.appendChild(divElement);
+	
+	// 4. js로 스타일 지정
+/* 	divElement.style.border="1px solid gray";
+	divElement.style.width= "100px";
+	divElement.style.height="100px";
+	divElement.style.textAlign="center"; */
+	
+/* 	jquery : addClass(), removeClass();
+	js     : classList.add()
+			 className =  */
+			 
+	divElement.className = "box";
+</script>
+</body>
+</html>

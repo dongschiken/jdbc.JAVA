@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+
+input[type="range"] {
+  appearance: slider-vertical;
+}
+
+</style>
+<body onload="init()">
+
+
+<form>
+색상 : <input type="color" id="color">
+
+<br>
+
+
+<br>
+설문 시작 날짜 : <input id="survey_start" type="date"><br>
+설문 종료 날짜 : <input id="survey_end" type="date" min="2024-03-01" max="2024-12-31"><br>
+<br>
+<input type="datetime-local"><br>
+<input type="datetime"><br>
+<br>
+첨부파일 : <input type="file" id="attach" name="attach">
+<br>
+다중 첨부파일 : <input type="file" id="attach" name="attach" multiple>
+<br>
+<!-- 상태관리할때 사용하는 방법 hidden
+	 다른 웹페이지에서 요청이 들어오면 히든값을 넘겨서 상태관리한다.
+  -->
+<input type="hidden" value="1234">
+<input id="btn" type="button" value="확인">
+
+<input type="image" src="../images/programming.gif">
+<br>
+
+<input type="number" min="0" max="100" value="1">
+<br>
+<input id="ran" type="range" min="0" max="100" value="30" step="1">
+<br>
+</form>
+
+<div id="demo"></div>
+
+<script>
+	let btn = document.getElementById("btn");
+	let color = document.getElementById("color");
+	let demo = document.getElementById("demo");
+	
+	let s_start = document.getElementById("survey_start");
+	let s_end = document.getElementById("survey_end");
+	
+	btn.onclick = function(){
+		/* demo.innerText = color.value; */
+		
+		demo.style.color = color.value;
+		demo.innerText = s_start.value + "~" + s_end.value;
+	}
+	
+	function init() {
+		
+	const range = document.getElementById("ran");
+		
+	}
+/* 	
+	input.addEventListener("input", (event) => {
+		  value.textContent = input.value;
+		  //value.textContent = event.target.value;
+		}); */
+	
+	range.oninput = function(){
+		demo.innerText = this.value;
+	}
+</script>
+</body>
+</html>

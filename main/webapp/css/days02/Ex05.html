@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	table{
+		width: 100%;
+		border: 1px solid gray;
+	}
+	
+	th, td{
+		border: 1px solid gray;
+		text-align: left;
+		padding: 8px;
+	}
+	tr:nth-child(even){
+		background-color: #f2f2f2;
+	}
+	
+	div{
+		border: 1px solid red;
+		/* 넘칠경우 자동으로 */
+		overflow-x: auto;
+	}
+</style>
+</head>
+<body>
+<pre>
+	[반응형 테이블]
+	화면이 너무 작아서 전체 내용*(content)을 
+	표시할 수 없는 경우
+	가로 스크롤 막대를 표시하는 테이블
+	
+	- 
+	1) table 요소 주위에 컨테이너(div)를 추가하고
+	2) overflow-x: auto;
+	반응형 테이블을 만들 수 있다.
+	
+</pre>
+<div>
+<table>
+	<tr>
+		<th>Lorem.</th>
+		<th>Consectetur.</th>
+		<th>Perferendis.</th>
+		<th>Eum?</th>
+		<th>Voluptates!</th>
+		<th>Voluptates!</th>
+		<th>Nihil.</th>
+		<th>Corrupti.</th>
+		<th>Ullam.</th>
+		<th>Temporibus!</th>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Doloribus.</td>
+		<td>Voluptatibus.</td>
+		<td>Dicta.</td>
+		<td>Doloremque.</td>
+		<td>Labore.</td>
+		<td>A?</td>
+		<td>Voluptatum.</td>
+		<td>Quaerat.</td>
+		<td>Veniam?</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Doloribus.</td>
+		<td>Voluptatibus.</td>
+		<td>Dicta.</td>
+		<td>Doloremque.</td>
+		<td>Labore.</td>
+		<td>A?</td>
+		<td>Voluptatum.</td>
+		<td>Quaerat.</td>
+		<td>Veniam?</td>
+	</tr>
+	<tr>
+		<td>Lorem.</td>
+		<td>Doloribus.</td>
+		<td>Voluptatibus.</td>
+		<td>Dicta.</td>
+		<td>Doloremque.</td>
+		<td>Labore.</td>
+		<td>A?</td>
+		<td>Voluptatum.</td>
+		<td>Quaerat.</td>
+		<td>Veniam?</td>
+	</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	*{
+		/* box-sizing: content-box; 기본값 */
+		box-sizing: border-box;
+		/* div(상자)의 너비 + 패딩 + 테두리 X */
+		
+		
+	}
+	
+	.box{
+		float: left;
+		width: 20%;
+		height: 200px;
+		padding: 30px;
+	}
+	.clearfix::after{
+		content: "";
+		clear: both;
+		display: table;
+	}
+</style>
+</head>
+<body>
+
+<div class="clearfix">
+<div class="box" style="background-color: #bbb">
+      <p>Lorem ipsum dolor sit.</p>
+   </div>
+   <div class="box" style="background-color: #ccc">
+      <p>Dolorem adipisci quidem dolores.</p>
+   </div>
+   <div class="box" style="background-color: #ddd">
+      <p>Iusto eaque labore ea.</p>
+   </div>
+</div>
+   
+<p>
+  <strong>Note:</strong>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus impedit veritatis voluptatum ipsam culpa ex neque iusto et voluptatibus voluptates officiis suscipit quidem provident similique esse dolores tenetur veniam quibusdam!
+</p>
+
+
+</body>
+</html>

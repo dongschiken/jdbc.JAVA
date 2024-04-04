@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+h3 {
+	background-color: yellow;
+}
+
+h3::first-letter {
+	color: red;
+	font-size: xx-large;
+}
+h3::after {
+	content: "~~~";
+}
+h3::before {
+	content:url(../images/SiSt.ico);
+}
+</style>
+</head>
+<body>
+	<!--  :: = 의사요소  -->
+	└ 요소의 지정된 부분에 스타일을 지정하는데 사용 └ 요소의 첫 글자 또는 첫 줄 스타일 지정 └ 요소의 내용 앞 또는 뒤에
+	다른 내용
+	<!--  :  = 의사 클래스  a:hover -->
+
+	<h3>Lorem ipsum dolor sit amet.</h3>
+	<h3>Non et dolore suscipit dolorum.</h3>
+	<h3>Placeat quia similique labore rem!</h3>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+	.mycontainer{
+		border: 1px solid red;
+		width: 100%;
+		overflow: auto;
+	}
+	div.mycontainer div{
+		width: 33.333333333333333333333333333%;
+		float: left;
+	}
+	
+
+</style>
+</head>
+<body>
+	<!-- 3개의 div를 새로 3등분해서 배치
+	 float 속성 사용
+	 - 이미지 + 텍스트 정렬(원래 목적)
+	 - css float 속성
+	 	└ ul  li/li/li
+	 	└ 콘텐츠의 위치를 지정, 서식 지정해서 사용 가능
+	 	└ 서로 겹쳐지는 대신 서로 옆에 떠 있는 것을 허용한다.
+  	-->
+	<div class="mycontainer">
+		<div style="background-color: #FFF4A3;">
+			<h2>London</h2>
+			<p>London is the capital city of England.</p>
+			<p>London has over 13 million inhabitants.</p>
+		</div>
+
+		<div style="background-color: #FFC0C7;">
+			<h2>Oslo</h2>
+			<p>Oslo is the capital city of Norway.</p>
+			<p>Oslo has over 600.000 inhabitants.</p>
+		</div>
+
+		<div style="background-color: #D9EEE1;">
+			<h2>Rome</h2>
+			<p>Rome is the capital city of Italy.</p>
+			<p>Rome has almost 3 million inhabitants.</p>
+		</div>
+	</div>
+
+<div>X</div>
+
+</body>
+</html>

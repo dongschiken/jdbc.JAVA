@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	ul{
+		list-style-type: lower-roman;
+		/* 이미지를 목록항목(li) 마커로 설정할 수 있다. */
+		list-style-image: url('../images/sqpurple.gif');
+	}
+	/* 목록항목의 마커 위치를 설정하는 속성 (list-style-position) */
+	ul.a{
+		list-style-position: inside;
+	}
+	ul.b{
+		list-style-position: outside;
+	}
+	ul li, ol li{
+		border: 1px solid gray;
+	}
+	
+	ul, ol{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	/* list  약식 */
+	ul{
+		list-style: squre inside url('마커경로');
+	}
+	
+</style>
+</head>
+<body>
+<pre>
+	순서 없는 목록 : ul, li  / d , c , s
+	순서 있는 목록 : ol, li  / 1 , i , a
+	
+</pre>
+
+<ul class="a">
+	<li>Lorem.</li>
+	<li>Quae!</li>
+	<li>Maxime.</li>
+</ul>
+
+<ul class="b">
+	<li>Lorem.</li>
+	<li>Quae!</li>
+	<li>Maxime.</li>
+</ul>
+
+<ol>
+	<li>Lorem.</li>
+	<li>Quae!</li>
+	<li>Maxime.</li>
+</ol>
+</body>
+</html>

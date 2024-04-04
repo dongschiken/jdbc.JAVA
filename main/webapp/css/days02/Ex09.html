@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	/* 1. 블럭모드 
+	   2. height 높이 지정
+	*/
+	
+	 div{
+	 	background-color: coral;
+	 	border: 1px solid; /* 테두리색은 black이 기본값 */
+	 	width: 300px;
+	 	height: 65px;
+	 	/* overflow는 visible이 기본값 */
+	 	/* overflow: hidden; */
+		
+		/* 넘치지 않아도 scroll이 생성된다. (좌우, 위아래 스크롤 모두 생성) */
+		/* overflow: scroll; */	 	
+		/* overflow-y: scroll;
+		overflow-x: hidden; */
+		
+		overflow: auto;
+	 }
+</style>
+</head>
+<body>
+<pre>
+	[ overflow 속성 ]
+	- 요소의 내용이 너무 커서 지정된 영역에 맞지 않을 경우
+	  그 내용을 자를지, 스크롤바를 추가 할지 등등을 지정하는 속성
+	- visible(기본값) : 내용이 넘치더라도 자르지 말고 보여준다.
+	- hidden : 잘라낸다.
+	- scroll : 내용이 넘치는 유무에 상관없이 스크롤바를 추가
+	- auto   : 내용이 넘칠 경우에만 스크롤바가 추가.
+	(주의사항) overflow 속성은 높이가 지정된 블럭요소에만 적용된다.
+	
+</pre>
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum atque error pariatur cupiditate similique recusandae culpa suscipit rerum voluptate officiis! Nemo soluta doloribus sequi perspiciatis quibusdam nulla quaerat eligendi harum!</div>
+<br>
+<div>lorem</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	ul{
+		margin-left: 20px;
+		color: blue;
+	}
+	li{
+		cursor: default;
+	}
+</style>
+</head>
+<body>
+
+
+<ul>
+	<li>Lorem.</li>
+	<li>Nihil.</li>
+	<li>Temporibus?</li>
+	<li>Architecto?</li>
+</ul>
+
+<script>
+	$("ul > li").hover(
+		function(){
+			/* append(요소) : 자식 요소로 추가하는 메서드 */
+			$(this).append("<span>자식</span>");
+		},
+		function(){
+			$(this).find("span").last().remove();
+		})
+</script>
+</body>
+</html>

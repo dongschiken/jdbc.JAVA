@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+   div{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      
+      position: relative;
+      
+      /* 애니메이션 처리 위한 속성 지정 */
+      animation-name: sample;
+      /* 애니메이션 완료하는 데 걸리는 시간 */
+      animation-duration: 4s;
+      /* 애니메이션의 속도 곡선 */
+      animation-timing-function: linear;
+      
+      /* 반복횟수 */
+      /* animation-iteration-count: infinite; */
+      /* 애니메이션의 시작전의 지연시간 */
+      animation-delay: 2s;
+      
+      /* forwards: 마지막 키 프레인 스타일 유지
+      backwards: 시작 키 프레임 스타일 유지 */
+      animation-fill-mode: forwards;
+      
+      /* alternate-reverse */
+      animation-direction: alternate-reverse;
+      
+      /* animation: sample 4s linear infinite 2s forwards alternate-reverse */
+   }
+   
+   /*  요소의 변경되는 시점(시기)
+      from(0%) / to(100%)      키워드
+      0%     백분율
+      15%
+      50%
+      100%
+    */
+          /* 규칙명 */
+   @keyframes sample{
+      from{
+         background-color: red;
+      }
+      to{
+         background-color: yellow;
+      }
+   }
+</style>
+</head>
+<body>
+<pre>
+   [애니메이션(animation)]
+   - 의미 : 하나의 스타일에서 점차 다른
+          스타일로 변환되는 것.
+   - javascript, flash 애니메이션 처리 가능
+   - css 사용해서 애니메이션 처리
+      ㄴ 키프레임(keyframe)
+         : 특정 시간에 가지는 요소의 스타일
+      예) [키프레임][키프레임][키프레임][키프레임] ... : 애니메이션
+         ㄴ @keyframes 규칙
+</pre>
+<div></div>
+</body>
+</html>

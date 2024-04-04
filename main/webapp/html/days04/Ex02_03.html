@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	<button id="btn1" type="button" onclick="display()">Hide</button>
+	<div id="demo" style="border: solid 1px gray">
+		<h3>안녕하세요. 홍길동입니다.</h3>
+		<br>
+		<p>안녕하세요. 홍길동입니다.</p>
+		<br>
+		<div>안녕하세요. 홍길동입니다.</div>
+		<br> 안녕하세요. <span>홍길동</span>입니다.<br>
+	</div>
+<script>
+// 1. js 이벤트 처리 : on이벤트명 속성 사용방법
+// 2. js 이벤트 처리 : 
+	
+	// jquery객체
+/* 	$("#btn1").click(function(){
+		$("#demo").css("display", sw ? "block" : "none");
+		$(this).text( sw ? "Hide" : "Show");
+		sw = !sw;
+	}); */
+	$("#btn1").click(function(){
+	// css("display", "none") == hide();
+	// css("display", "display") == show();
+/*  	if (sw) {
+		$("#demo").hide();
+		$("#btn1").text("Hide");
+	}else{
+		$("#demo").show();
+		$("#btn1").text("Show");
+	} 
+ 	sw = !sw; */
+	
+ 	$("#demo").toggle();
+	$(this).text( $(this).text() == "Hide" ? "Show" : "Hide");
+	}); 
+
+</script>
+</body>
+</html>

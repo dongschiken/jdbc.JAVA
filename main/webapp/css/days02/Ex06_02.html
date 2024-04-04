@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	.imgbox{
+		width: 120px;
+		border: 1px solid gray;
+		padding: 6px;
+		margin: 4px;
+		display: inline;
+		text-align: center;
+		float: left;
+	}
+
+	.imgbox img{
+		width: 100%;
+	}
+	
+</style>
+</head>
+<body>
+<h3>
+	display, visibility 속성의 차이점
+	1. display : 공간 차지를 없애는것
+	2. visibility : 공간은 남기고 보이지 않게 하는 것 (사라져도 레이아웃에 영향을 미친다.)
+</h3>
+
+<!-- #imgbox$.imgbox*3>{Box$}+img+button -->
+<div id="imgbox1" class="imgbox">
+	Box1<img src="../images/img_5terre.jpg" alt="" />
+<button onclick="remove()">Remove</button>
+</div>
+<div id="imgbox2" class="imgbox">
+	Box2<img src="../images/img_lights.jpg" alt="" />
+	<button>Hide</button>
+</div>
+<div id="imgbox3" class="imgbox">
+	Box3<img src="../images/img_forest.jpg" alt="" />
+	<button>ResetAll</button>
+</div>
+
+
+<script>
+	let box1 = document.getElementById("imgbox1");
+							// 선택자를 통해서 얻어오는 방법 imgbox2 안에 있는 button
+	let box2Btn = document.querySelector("#imgbox2 button"); 
+	let box3Btn = document.querySelector("#imgbox3 button");
+	// 클릭 이벤트 3가지 처리 방법
+	//[1]
+	function remove(){
+		//alert("remove");
+		box1.style.display = "none"; // block, inline
+	}
+	
+	//[2]
+	box2Btn.onclick = function(){
+		/* alert("Hide"); */
+		/* alert(this.parentElement); */
+		let box2 = this.parentElement;
+		box2.style.visibility = "hidden";  // visible
+	}
+	
+/* 	box3Btn.onclick = function(){
+		box1.style.display = "inline";
+		let box2 = box2Btn.parentElement;
+		box2.style.visibility = "visible";
+	} */
+	//[3]
+	box3Btn.addEventListener("click", function(){
+		box1.style.display = "block";
+		let box2 = box2Btn.parentElement;
+		box2.style.visibility = "visible";
+	});
+	
+</script>
+</body>
+</html>

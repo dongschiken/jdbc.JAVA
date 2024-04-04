@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	input[type="text"]:disabled{
+		background-color: #ddd;
+	}
+	input[type="text"]:enabled{
+		background-color: blue;
+	}
+	/* 체크된 input 박스를 50xp로 */
+	input:checked{
+		height: 50px;
+		width: 50px;
+	}
+	p:empty{
+		width: 200px;
+		height: 20px;
+		background-color: red;
+	}
+	
+	/* p 요소를 제외한 모든 요소를 지정해서 스타일을 주겠다. */
+	:not(p){
+		color: blue;
+	}
+	
+</style>
+
+</head>
+<body>
+
+<!-- 의사 클래스 ":"
+	 - 요소의 특정 상태를 나타낸다.
+	 - :not(선택자) => 선택자를 제외한 모든 선택자
+	 - :empty => 내용이 없는 요소
+	 - :checked => 체크된 상태의 요소
+ -->
+name : <input type="text" value="비활성" disabled="disabled"><br>
+age : <input type="text" ><br>
+addr : <input type="text" ><br>
+tel : <input type="text" ><br>
+
+<form action="">
+  <input type="radio" checked="checked"> male<br>
+  <input type="radio"> female<br>
+  
+  <input type="checkbox" checked="checked"> bike<br>
+  <input type="checkbox"> car<br>
+</form>
+
+<h1>Lorem ipsum dolor sit amet.</h1>
+<p></p>
+<p>Lorem ipsum dolor sit amet.</p>
+<div>Lorem ipsum dolor sit amet.</div>
+
+<a href="#">SiSt</a>
+</body>
+</html>

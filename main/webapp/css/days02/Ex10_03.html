@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	div{
+		border: 3px solid #4caf50;
+		padding: 5px;
+	}
+	div > img.image1{
+		float: left;
+	}
+/* 	.clearfix{
+		overflow: auto;
+	} */
+	
+	/* 의사 요소 (최근 웹 페이지에서 사용하는 clearfix 해킹 방법) */
+	.clearfix::after{
+		content:"";
+		clear: both;
+		display: table;
+	}
+</style>
+</head>
+<body>
+<pre>
+
+		[ clearfix 해킹 ]
+		부동요소(float가 잡혀져 있는 요소)가 포함(안잡힌) 요소보다 크면 
+		컨테이너 외부에 오버플로가 발생한다. -> 이런 부분을 해결하기 위한것 == clearfix 해킹
+		
+</pre>
+
+<div class="clearfix">
+	<img class="image1" src="../images/pineapple.jpg" alt=""
+	width=170; height=170>Lorem ipsum dolor sit amet, ducimus vitae rerum facilis cumque inventore aliquam facere harum similique nobis?</170></div>
+</body>
+</html>

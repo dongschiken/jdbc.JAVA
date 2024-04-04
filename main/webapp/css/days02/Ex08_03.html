@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	.box{
+	border : 1px solid gray;
+	width : 100px;
+	height : 100px;
+	text-align : center;
+	}
+	
+	
+</style>
+<style>
+	div:nth-of-type(1){
+		background-color: red;
+	}
+	div:nth-child(2){
+		background-color: white;
+	}
+	div:first-of-type{
+		background-color: red;
+	}
+	div:nth-child(3){
+		background-color: red;
+	}
+	div:nth-of-type(2){
+		background-color: yellow;
+		position: relative;
+		/* 상대 좌표 - 
+		   기준 좌표 - 일반 위치
+		   l, r, t, b 좌표
+		   
+		 */
+		 left: 20px;
+		 top: 20px;
+	}
+	div:nth-of-type(3){
+		background-color: red;
+		position: fixed;
+		/* fixed : 페이지 스크롤 항상 같은 위치 유지 */
+		right: 10px;
+		bottom: 10px;
+	}
+	div:nth-of-type(4){
+		background-color: blue;
+		position: absolute;
+		/* 절대 좌표 : 가장 가까운 위치의 조상을 기준으로 좌표값을 찍는다. */
+		/* fixed : 페이지 스크롤 항상 같은 위치 유지 */
+		left: 50px;
+		top: 25px;
+		
+		z-index: -1;
+	}
+	
+</style>
+</head>
+<body>
+<!-- <div class="box">Box - 1</div> -->
+
+
+
+<script>
+	for (var i = 1; i <= 5; i++) {
+		const divElement = document.createElement("div");
+		
+		divElement.innerText = "Box - "+i;
+		divElement.className = "box";
+		document.body.appendChild(divElement);
+	
+	} // for
+	
+	
+			 
+</script>
+</body>
+</html>

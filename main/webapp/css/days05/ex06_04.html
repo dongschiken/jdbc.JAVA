@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	.grid-container{
+		background-color: #2106f3;
+		padding: 10px;
+		
+		display: grid;
+		
+		grid-template-areas: 
+	   'header header header header header header' 
+       'menu main main main main right'
+       'menu footer footer footer footer footer';
+		gap: 10px;
+	}
+	
+	.grid-container > div{
+		background-color: rgba(255,255,255, 0.8);
+   		text-align: center;
+   		padding: 20px 0;
+   		font-size: 30px;
+	
+	}
+	
+	.item1{ grid-area: header; }
+	.item2{ grid-area: menu; }
+	.item3{ grid-area: main; }
+	.item4{ grid-area: right; }
+	.item5{ grid-area: footer; }
+	
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+   <div class="item1">Header</div>
+   <div class="item2">Menu</div>
+   <div class="item3">Main</div>
+   <div class="item4">Right</div>
+   <div class="item5">Footer</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+/* 반응형 웹 : 모든 장치  */
+* {
+	box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+	nav, article {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+body {
+	/* 글꼴은 보통 외부에서 링크로 받아온다. */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	background-color: #666;
+	color: white;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+}
+
+footer {
+	background-color: #777;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 25px;
+}
+
+section {
+	border: 1px solid red;
+}
+
+nav {
+	width: 30%;
+	background-color: #ccc;
+	float: left;
+	padding: 20px;
+}
+
+article {
+	width: 40%;
+	background-color: #f1f1f1;
+	float: left;
+	height: 500px;
+	padding: 20px;
+}
+
+section::after {
+	content: "";
+	display: table;
+	/* 뒤에 따라오는놈을 clear한다. */
+	clear: both;
+}
+
+section {
+	background-color: #ccc;
+}
+</style>
+</head>
+<body>
+
+
+	<h2>div(layout)+css</h2>
+	<header>
+		<h2>Cites-시멘틱태그(sementic elements)</h2>
+	</header>
+	<section>
+		<nav>
+			<ul>
+				<li><a href="#">London</a></li>
+				<li><a href="#">Paris</a></li>
+				<li><a href="#">Seoul</a></li>
+			</ul>
+		</nav>
+		<article>
+			<h2>Lodon</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Eligendi optio consectetur ratione sunt soluta praesentium delectus
+				fugit cumque repellendus placeat laudantium vero eveniet ab maxime
+				enim quaerat inventore! Repellendus reprehenderit.</p>
+			<p>Ad quas eos est facere quo doloremque iure vel illum facilis
+				eius at dolore fugit debitis unde saepe qui porro aut quam
+				asperiores quos tempore ex deleniti minus provident magni?</p>
+
+			<h2>Paris</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+				aut dolorum rerum quisquam? Reprehenderit delectus fuga praesentium
+				nisi id nulla dolore doloremque veritatis sapiente minima quod
+				molestias. Possimus cumque enim.</p>
+			<p>Quasi a cumque sapiente vitae iste nobis suscipit? Pariatur
+				asperiores deserunt vero praesentium possimus quaerat est nisi porro
+				enim ducimus cupiditate repellat neque! Laboriosam magni magnam
+				expedita cupiditate voluptates reprehenderit.</p>
+			<h2>Seoul</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Voluptate eaque quas id ipsam soluta tempore temporibus suscipit
+				quae quaerat perspiciatis velit minima nihil ut repellat incidunt
+				accusamus neque et accusantium.</p>
+			<p>Sit nostrum quisquam sed animi cupiditate voluptates rerum
+				accusantium facere quod totam ipsum commodi neque natus quidem
+				ducimus cumque dolorum aperiam modi adipisci minus et sapiente
+				tenetur doloremque repellendus dicta!</p>
+
+		</article>
+	</section>
+	<footer>
+		<h2>Footer</h2>
+	</footer>
+
+
+
+</body>
+</html>
+<!-- 
+	시멘틱 태그 == 의미가 있는 요소
+	1. 개발자에게 의미가 있는 태그
+	   브라우저에게 
+	2. div 컨테이너 id="header" class="header"
+	   div 컨테이너 id="footer" class="footer"
+	3. 시캔틱 태그 종류  
+	   <article>   	- 독립적인 자체에 포함된 내용을 지정하는 태그 (ex 신문기사들, 제품카드, 사용자의견, 블로그 게시물, 포럼 게시글)
+	   <aside>	   	- 어떤 주요 내용과 관련된 어떤 콘텐츠를 정의하는 태그
+	   <details>	- 
+	   <figcaption>	- 그림, 사진, 도표, 목록 내용을 정의하는 태그
+	   <figure>		-
+	   ** <footer> 	- 바닥글, 문서나 구역의 바닥글을 정의하는 태그
+	   ** <header> 	- 소개 내용, 머릿글
+	   <main>		-
+	   <mark>		-
+	   ** <nav>	   	- 탐색 링크의 집합을 정의하는 태그
+	   ** <section>	- 부분, 마디, 제목이 있는 주제별 컨텐츠 그룹
+	   <summary>	-
+	   <time> 		-
+	4. 
+ -->

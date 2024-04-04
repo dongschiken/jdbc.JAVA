@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	pre{
+		/* background-color: rgb(255, 30, 50) */
+		background-color: hsl(0, 100%, 50%); 
+	}
+</style>
+</head>
+<body>
+
+
+<pre>
+	[css 색상]
+	1. 140개의 미리 정의된 표준 색상명
+	2. hex  #16진수
+			#00 00 00
+			 빨  녹  파
+			 00~FF
+	3. RGB 색의 3원소
+	4. RGBA (0~255, 0~255, 0~255, 0.0~1.0)
+		A == 투명도
+		0.0 완전투명 ~ 1.0 불투명
+	5. HSL 
+		Hue : 색상 0~120 빨강 / 121~240 녹색 / 241~360파랑
+		Saturation : 채도 백분율값 => 0%(회색음영) ~ 100%(풀컬러)
+		Lightness : 명도(밝기) 백분율값 => 0% 검은색 100% 흰색
+				  
+				
+</pre>
+<pre style="background-color: rgba(255, 30, 50, 0.3)">
+	 html 주석처리	 <!--  -->
+	 css  주석처리  /* */
+	 js   주석처리  // /* */
+</pre>
+
+빨강 : <input id="r" type="range" min="0" max="255" value="255"><br>
+녹색 : <input id="g" type="range" min="0" max="255" value="255"><br>
+파랑 : <input id="b" type="range" min="0" max="255" value="255"><br>
+
+<script>
+  $("input[type=range]").on("input", function (){
+     let rv = $("#r").val();
+     let gv = $("#g").val();
+     let bv = $("#b").val();
+     $("pre").css(
+           "background-color"
+           ,
+           "rgb("+rv+","+gv+","+bv+")");
+  });  
+</script>
+</body>
+</html>

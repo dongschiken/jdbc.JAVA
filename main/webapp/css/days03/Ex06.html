@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	p::first-letter{
+		color: red;
+		font-variant: small-caps;
+	}
+	/* 첫번째 라인만 블루칼라 */
+	p::first-line{
+		color: blue;
+		font-size: x-large;
+	}
+	
+</style>
+<style>
+	/* 요소의 내용 앞에 일부 내용을 삽입 */
+	h3::before{
+		content: url('../images/arr.gif');	
+	}
+	/* 요소의 내용 뒤에 일부 내용을 삽입 */
+	h3::after{
+		content: url('../images/arr.gif')	
+	}
+	
+	/* 선택된(마우스로) 요소를 노란색배경에 빨간 글자로 바꿈 */
+	::selection{
+		color: red;
+		background-color: yellow;
+	}
+	
+	
+</style>
+</head>
+<body>
+
+<h3>::의사 요소 설명</h3>
+<pre>
+	[ ::의사요소 ]
+	1. 요소의 지정된 부분에 스타일 지정.
+	2. 일부분??
+		└ 요소의 첫 글자, 첫 줄
+		└ 요소의 내용의 앞, 뒤 + 어떤 컨텐츠 삽입
+	
+</pre>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quidem voluptatibus laboriosam placeat voluptatem ullam est maiores nemo nesciunt architecto repellat dolores odio veritatis. Sint sed quos ipsum reiciendis saepe.</p>
+</body>
+</html>

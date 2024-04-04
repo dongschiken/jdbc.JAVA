@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	p{
+		background-color: yellow;
+		padding: 20px;
+		display: none;
+	}
+/* 	div:hover p{
+		display: block;
+	} */
+</style>
+</head>
+<body>
+
+<pre>
+	[: 의사 클래스 ]
+	└ 요소의 특정 상태를 정의하는데 사용되는 클래스
+	a:hover
+	input:focus
+</pre>
+
+<div>--- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore a.
+<p>Lorem ipsum dolor.</p>
+</div>
+
+<script>
+/* 	const div = document.querySelector("div");
+	const p = document.querySelector("div  > p");
+	
+	div.onmouseover = function(){
+		p.style.display = "block";
+	}
+	
+	
+	div.onmouseout = function(){
+		p.style.display = "none";
+		 
+	}*/
+/* 	$("div").hover(
+		function(){
+			$("div > p").show();
+		},
+		function(){
+			$("div > p").hide();
+		}	
+	) */
+	$("div").hover( function(){
+		$("div > p").toggle();
+	})	
+	
+</script>
+</body>
+</html>

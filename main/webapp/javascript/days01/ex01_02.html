@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  
+ <input type="text" id="textContent" class="long" placeholder="컨텐츠 입력" autofocus>
+ <button class="add">실행 (execute)</button>
+ 
+ <div id="demo">결과 : </div>
+</div>
+
+<script>
+	let btnAdd = document.querySelector("button.add");
+	let text = document.getElementById("textContent");
+	
+	
+	btnAdd.onclick = function(){
+		
+		let content = document.getElementById("textContent").value; 
+		const demo = document.querySelector("#demo");
+		/* demo.innerHTML += "content"; */
+		/* demo.innerText = "결과 : " 
+		+ "<span style='color: red'><b>" + content + "</span>";  */
+		demo.innerHTML = "결과 : " 
+		+ "<span style='color: red'><b>" + content + "</span>"; 
+		//let content = document.getElementById("textContent").getAttribute("id");
+		//alert(content);
+		/* text.value = ""; */
+		text.select();
+		text.focus();
+	}
+	
+	
+	
+</script>
+</body>
+</html>

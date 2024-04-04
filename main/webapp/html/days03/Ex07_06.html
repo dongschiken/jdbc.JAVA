@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<style>
+	table, th, td{
+		border: 1px solid gray;
+		border-collapse: collapse;
+	}
+	td{
+		text-align: center;
+	}
+	/* 일요일에 해당하는 속성만 원하는 값으로 지정(빨강색) */
+</style>
+<script>
+	function hide(){
+		var demo = document.getElementById("");
+		demo.style.border = "1px solid blue";
+		demo.style.color = "red";
+		// 만약 background-color와 같이 "-"가 나오면 -를 없애고 앞글자를 대문자로 바꾼다.
+		demo.style.backgroundColor = "yellow";
+		demo.style.visibility = "hidden";
+	}
+</script>
+</head>
+<body>
+	<!-- col, colgroup 속성 설명 
+		[col]
+		테이블의 특정 열에 스타일을 지정하기 위한 태그
+		width, visibiltiy, background, border 속성만 제한적으로 설정할 수 있다.
+	-->
+
+	<table style="width: 100%">
+	<colgroup>
+		<col span="1" style="width:100px; background-color: red ">
+		<col span="5">
+		<col span="1" style="width:100px; background-color: blue ">
+	</colgroup>
+		<tr>
+			<th>SUN</th>
+			<th>MON</th>
+			<th>TUE</th>
+			<th>WED</th>
+			<th>THU</th>
+			<th>FRI</th>
+			<th>SAT</th>		
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+			<td>12</td>
+			<td>13</td>
+			<td>14</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>16</td>
+			<td>17</td>
+			<td>18</td>
+			<td>19</td>
+			<td>20</td>
+			<td>21</td>
+		</tr>
+		<tr>
+			<td>22</td>
+			<td>23</td>
+			<td>24</td>
+			<td>25</td>
+			<td>26</td>
+			<td>27</td>
+			<td>28</td>
+		</tr>
+	</table>
+	
+	<hr>
+	<!-- 클릭 이벤트 처리 : on이벤트명 속성 사용  -->
+	<button onclick="hide()">숨기기 버튼</button>
+	<pre id="demo" style="border: 1px solid gray">
+		숨기기 자료.<br>
+		숨기기 자료.<br>
+		숨기기 자료.<br>
+	</pre>
+	<!-- table, tr, th, td, thead, tbody, tfoot, caption, col, colgroup -->
+</body>
+</html>

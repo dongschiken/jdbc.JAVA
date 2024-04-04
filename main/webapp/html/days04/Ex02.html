@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script>
+	var sw = false;
+
+	
+	function display(){
+		var btn1 = document.getElementById("btn1");
+		var btnText = btn1.innerText;
+		var demoDiv = document.getElementById("demo");
+		
+		if (!sw) {
+			btn1.innerText = "Show"
+		 	//alert( demoDiv ); 
+			console.log("숨기다");
+			demoDiv.style.display = "none";
+		} else {
+			btn1.innerText = "Hide"
+			//alert( demoDiv ); 
+			console.log("보이다");
+			demoDiv.style.display = "block";
+		}
+		sw = !sw;
+		
+	}
+	
+</script>
+</head>
+<body>
+	<button id="btn1" type="button" onclick="display()">Hide</button>
+<div id="demo" style="border: solid 1px gray">
+	<h3>안녕하세요. 홍길동입니다.</h3><br>
+	<p>안녕하세요. 홍길동입니다.</p><br>
+	<div>안녕하세요. 홍길동입니다.</div><br>
+	안녕하세요. <span>홍길동</span>입니다.<br>
+</div>
+</body>
+</html>

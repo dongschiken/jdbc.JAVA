@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	/* css 변수 + val() 함수 사용  
+	   var( --변수명, 값 ) 
+	*/
+	
+	/* css 전역변수 => root:{} 안에 코딩 */
+	:root{
+		/* --blue: #1e90ff; */
+		--blue: red; 
+		--white: #ffffff;
+	}
+	body{
+		/* css 지역변수 : 선택자 안에서만 사용 가능 */
+		background-color: var(--blue);
+	}
+	h2{
+		border-bottom: 2px solid var(--blue);
+	}
+	
+	.container{
+		color:1e90ff;
+		background-color: var(--white);
+		padding: 15px;
+	}
+	button{
+		/* 만약 전역변수와 지역변수의 식별자가 같으면
+		   전역변수를 지역변수로 재정의 한다.
+		   --blue == --blue 
+		 */
+		--blue: #1e90ff;
+		background-color: var(--white);
+		color: var(--blue);
+		border: 1px solid var(--blue);
+		padding: 5px;
+	}
+</style>
+</head>
+<body>
+
+
+<h1>The Traditional Way</h1>
+
+<div class="container">
+  <h2>Lorem Ipsum</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+  <p>
+    <button>Yes</button>
+    <button>No</button>
+  </p>
+</div>
+
+
+</body>
+</html>

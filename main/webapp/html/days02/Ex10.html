@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico"> -->
+<link rel="shortcut icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1">
+<style>
+	a{
+		color: #000; /* blank; $000000*/
+		text-decoration: none;	
+	}
+	a:hover{
+	color: orange;
+	text-transform: capitalize; /* 첫문자만 대문자로 */
+	text-decoration: underline; /* 밑줄 */
+	}
+	
+</style>
+</head>
+<body>
+	<a href="Ex10_02.html#desc">책갈피 구현 설명 [이동]</a>
+	<br>
+	<!-- html 링크 -->
+<!-- 	링크를 클릭합면 다른 문서로 이동하는 것.
+	하이퍼 링크
+	링크위로 마우스를 이동하면 마우스가 화살표 모양에서 작은 손모양으로 변한다.
+	링크는 텍스트, 이미지, 기타 html 요소일 수 있다. -->
+	<a href="http://www.naver.com">naver</a>
+	<a href="http://www.daum.net">daum</a>
+	<br>
+	<!-- days02.ex01.html 페이지 링크 -->
+	<!-- 절대경로 -->
+	<a href="http://localhost/webPro/html/days02/Ex01.html">days01.ex01.html</a>
+	
+	<br>
+	<!-- days02.ex01.html 페이지 링크 -->
+	<!-- 상대경로 -->
+	<!-- 기준경로 http://localhost/webPro/html/days02 (여기까지 와있음, 같은 폴더안의 링크를 걸기위해서는 파일명만 주면된다.) -->
+	<a href="Ex01.html">ex01.html</a>
+<!-- 	http://localhost/Ex01.html "/"를 붙인 경로
+		http://localhost/webPro/html/days02/Ex01.html "/"를 안붙인 경로 -->
+	<br>
+	<!-- 기준경로 http://localhost/webPro/html/days02 (여기까지 와있음, 같은 폴더안의 링크를 걸기위해서는 파일명만 주면된다.) -->
+	<a href="/Ex01.html">/ex01.html</a>
+	<a href="/webPro/html/days02/Ex01.html">/webPro/html/days02/Ex01.html</a>
+	
+	<!-- days01/ex01.html -->
+	<!-- 상대경로 -->
+	<a href="/webPro/html/days01/Ex01.html">/webPro/html/days01/Ex01.html</a>
+	<br>
+	<a href="./Ex01.html">./Ex01.html</a>
+	<br>
+	<a href="../days01/Ex01.html">상위./Ex01.html</a>
+	<a href="../../Ex01.html">상위./Ex01.html</a>
+	<br>
+	<a href="../days01/Ex01.html" target="_blank">상위./Ex01.html</a>
+	
+	
+	<!-- 
+	1) 밑줄 + 보라색 : 이미 방문한 사이트
+	2) 밑줄 + 파랑색 : 방문하지 않은 링크
+	3) 밑줄 + 빨강색 : 방문하려고 클릭하는 순간의 링크
+	
+	a 태그의 target 속성? 링크된 문서를 열 위치를 지정하는 속성
+	1) _self	기본값
+	2) _blank	새 창(새 탭)을 열어서 문서를 연다.
+	3) _parent	부모(상위)프레임에 문서를 연다.
+	4) _top		창 전체에서 문서를 연다.
+	-->
+</body>
+</html>
