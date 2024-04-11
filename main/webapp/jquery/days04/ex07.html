@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  
+   <table id="tblDept">
+     <thead>
+        <tr>
+           <th><input type="checkbox" class="all"> 모두 선택</th>
+           <th>Name</th>
+           <th>Loc</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr>
+           <td><input type="checkbox" id="ck1"></td>
+           <td>Quam.</td>
+           <td>Sapiente.</td>
+        </tr>
+        <tr>
+           <td><input type="checkbox" id="ck2" data-name='Consequatur!'></td>
+           <td>Consequatur!</td>
+           <td>Nisi.</td>
+        </tr>
+        <tr>
+           <td><input type="checkbox" id="ck3"></td>
+           <td>Tenetur!</td>
+           <td>Modi.</td>
+        </tr>
+        <tr>
+           <td><input type="checkbox" id="ck4"></td>
+           <td>Earum.</td>
+           <td>Officiis.</td>
+        </tr>
+     </tbody>
+     <tfoot>
+         <tr>
+          <td colspan="3" align="center">
+            <button>선택 확인</button>
+          </td>
+         </tr>
+     </tfoot>
+  </table>
+  
+  <p id="demo"></p>
+</div>
+<script>
+        // jq 수정
+        // jq selector input[type=checkbox]
+        $(":checkbox.all").on("click", function(event){
+            // $("tbody:checkbox")
+            // $(":checkbox[id^=ck]")
+            $(":checkbox:not(.all)").prop("checked", $(this).prop("checked"));
+            
+            $(":checkbox:not(.all)").on("click", function(){
+            	let count = $(":checkbox:not(.all)").length;
+            	let checkedCount = $(":checkbox:not(.all):checkbox").length;
+            	$(":checkbox.all").prop("checked", count == checkedCount? true : false);
+            })
+        })
+</script>
+<script>
+	$("tfoot button").on("click", function(){
+		// 초기화
+		$("p#demo").html("");
+		
+		$("tbody :checkbox:checked").each( function(index, element){
+			id = element.id; // getAttribute()
+			name = element.parentElement.parentElement.children.item();
+			element.eq(1).data();
+			$("p#demo").html(function(index, oldhtml){
+				return oldhtml + `<li>${id} / ${name}</li>`;
+			});
+		});
+		
+	});
+</script>
+</body>
+</html>

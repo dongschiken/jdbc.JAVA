@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+</div>
+<script>
+	const m = ["sbs", "jtbc", "mbc", "kbs"];
+	document.write( m.toString() + "<br>" );
+	// m이라는 배열 자체가 정렬되어져서 변경된다.
+	m.sort(); // 오름차순 정렬
+	// m이라는 배열이 변경되지 않고 정렬된 새로운 배열을 만드는 함수
+	const s_m = m.toSorted(); // 오름차순 정렬
+	document.write( m.toString() + "<br>" );
+	m.reverse(); // 오름차순 정렬된 배열을 뒤집는다. ( 내림차순 정렬 )
+	const r_m = m.toReverse();
+	document.write( m.toString() + "<br>" );
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  <p id="demo"></p>
+</div>
+<script>
+/* 	$("#demo").html( myfunc(10, 20) );
+	function myfunc(a, b){
+		return a + b;
+	} */
+	
+	//alert( typeof myfunc ) // [function]
+	
+	// js 함수는 표현식을 사용해서 정의할 수도 있다.
+/* 	const test = function ( a, b ) {
+		let x; // 지역변수
+		return a - b;
+	}; */
+	
+	//$("#demo").html( test( 1 , 2 ) );
+	
+</script>
+<script>
+	// 
+	// Function() 생성자 함수를 사용해서 함수를 정의할 수 있다.
+	const test2 = new Function("a", "b", "return a * b");
+	$("#demo").html( test2( 3, 2) ); // 함수호출이 함수 선언보다 위에 있으면 에러 발생한다. ( 호이스팅 되지 않는다. )
+</script>
+<script>
+	// js 변수, 함수는 호이스팅 된다.
+	// 표현식을 사용하여 정의된 함수는 호이스팅 되지 않는다.
+	test3(); // 호이스팅 되지 않아서 에러 발생
+	const test3 = function(){
+		alert("test3")
+	}
+	
+</script>
+</body>
+</html>

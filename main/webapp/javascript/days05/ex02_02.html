@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	[ js 문자열 메서드 ]
+	
+  </xmp>
+</div>
+<script>
+	let text = "ABCDEFGHIJ";
+	// 1. 문자열의 길이 length
+	//alert( text.length ); // 10
+	// 2. 지정된 위치의 한 문자를 반환
+	//alert( text.charAt(0) ); // A
+	// 3. UTF-16 문자코드값을 반환
+	//alert( text.charCodeAt(0) ); // 65
+	// 4. charAt(0) 과 동일
+	//alert( text.at(0) );
+	// charAt() 과 at()의 차이
+	// text에서 마지막 index값 가져올때 
+	// text.charAt( text.length - 1);
+	// text.at( -1 );
+	// 5. 마치 문자열을 배열처럼 사용했지만 문자열은 배열이 아니다.
+	// 문자열[위치] ==> 읽기 전용이다.
+	// text[0] = "x" 이렇게 값을 할당하는것은 안된다. 
+	alert( text[0] );
+	
+	for (var i = 0; i < text.length; i++) {
+		document.write( text[i] + "<br>");
+	}
+</script>
+</body>
+</html>

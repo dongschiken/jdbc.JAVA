@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+	.txtbox{
+		width: 300px;
+	}
+	#items{
+		height: 200px;
+		overflow: auto;
+		border: 1px solid gray;
+		
+	}
+</style>
+
+
+
+</head>
+<body onload="init()">
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/Option
+  </xmp>
+<select name="itemCount" id="itemCount">
+	<option>선택...</option>
+	
+</select>
+<br>
+<div id="items"></div>
+</div>
+
+<script>
+	/* assuming we have the following HTML
+	
+	*/
+	
+	document.querySelector("#itemCount").onchange = function(){
+		
+		let container = document.querySelector("#items");
+		let count = this.options[this.selectedIndex].value;
+		//alert(count);
+		for (var i = 1; i <= count; i++) {
+			// 항목 1 : 
+			let content = `항목 ${i} : `;
+			
+			let itemNO = document.createTextNode(content);
+			container.appendChild( itemNO );
+			// <input type="text" id="item-1" name="item-1">
+			let txtbox = document.createElement("input");
+			txtbox.setAttribute("type", "text");
+			txtbox.setAttribute("id", "item-"+i);
+			txtbox.setAttribute("name", "item-"+i);
+			txtbox.className = "txtbox";
+			container.appendChild( txtbox );
+			//<br> 개행
+			let br = document.createElement("br");
+			container.appendChild( br );
+		} // for
+	};
+	
+	function init(){
+		let sel = document.querySelector("#itemCount");
+		for (var i = 1; i <= 15; i++) {
+			sel[i] = new Option(i, i);
+		}
+		
+	}
+	
+/* 	options.forEach((element, key) => {
+	  s[key] = new Option(element, key);
+	  console.log(`element : ${element} / key : ${key}`);
+	}); */
+</script>
+</body>
+</html>

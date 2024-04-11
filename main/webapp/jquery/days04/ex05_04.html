@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">    
+  	$("input[type=text]")			$(":text")
+  	$("input[type=password]")		$(":password")
+  	$("input[type=checkbox]")		$(":checkbox")
+  	$("input[type=radio]")			$(":radio")
+  	$("input[type=submit]")			$(":submit")
+  	$("input[type=reset]")			$(":reset")
+  	$("input[type=button]")			$(":button")
+  	$("input[type=file]")			$(":file")
+  	$("input[type=image]")			$(":image")
+  </xmp>
+  <div style="display: flex;justify-content: space-around;align-items: baseline;">
+    <input type="text" autofocus="autofocus">
+    <!-- +  4:03 수업 시작-->
+    <select name="operator" id="operator">
+         <option>선택.</option>
+         <option>+</option>
+         <option>-</option>
+         <option>*</option>
+         <option>/</option>
+         <option>%</option>
+         <option>**</option>
+   </select> 
+    <input type="text">
+    =
+    <input type="text" disabled="disabled">
+  </div>
+</div>
+
+<script>
+ // '0' 48 ~ '9' 57
+ // backspace 8
+ // enter 13
+ // esc 27
+ 
+ let n1, n2;
+ $(":text").first().on( "keydown", function(event){
+	if( event.which == 13 ) {
+		// js regex 정규표현식 // 사이에 준다.
+		const regexp = /^\d+$/; // [0-9]
+		if( regexp.test( $(this).val() )){
+			$(this).next().next().focus();
+			n1 = parseInt($(this).val());
+		}else{
+			$(this).select();
+		}
+	} // if
+ });
+ 
+ $(":text").eq(1).on( "keydown", function(event){
+		if( event.which == 13 ) {
+			// js regex 정규표현식 // 사이에 준다.
+			const regexp = /^\d+$/; // [0-9]
+			if( regexp.test( $(this).val() )){
+				$(this).prev().focus();
+				n2 = parseInt($(this).val());
+			}else{
+				$(this).select();
+			}
+		} // if
+	 });
+ 
+  $("#operator").on("change", function(event){
+	  let op = $(this).val();
+	  let result = eval(n1 + op + n2);
+	 /*  switch ( $(this).val() ) {
+      case "+":   
+         result = parseInt( n1.value ) + Number( n2.value );
+         break;
+      case "-":   
+         result = parseInt( n1.value ) - Number( n2.value );
+         break;
+      case "*":   
+         result = parseInt( n1.value ) * Number( n2.value );
+         break;
+      case "/":      
+         result = parseInt( n1.value ) / Number( n2.value );
+         break;
+      case "%":         
+         result = parseInt( n1.value ) % Number( n2.value );
+         break;
+      case "**":      
+         result = parseInt( n1.value ) ** Number( n2.value );
+         break;
+    } // switch
+    */
+    $(":text").last().val(result);
+    $(":text").first().select();
+  });
+  
+</script>
+</body>
+</html>
+
+
+
+
+
+

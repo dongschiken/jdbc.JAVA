@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<style>
+span.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+
+
+
+</head>
+<body>
+	<header>
+		<h1 class="main">
+			<a href="#" style="position: absolute; top: 30px;">dongs Home</a>
+		</h1>
+		<ul>
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+		</ul>
+	</header>
+	<div>
+		<xmp class="code"> </xmp>
+		<button>실행</button>
+		<p id="demo" stlye="border:1px solid"></p>
+	</div>
+	
+<script>
+	let content = "";
+	content += "<table border='1' style='width:300px'>";
+	content += "	<tr>                              ";
+	content += "		<td>Lorem.</td>               ";
+	content += "		<td>Ut!</td>                  ";
+	content += "		<td>Itaque?</td>              ";
+	content += "	</tr>                             ";
+	content += "	<tr>                              ";
+	content += "		<td>Lorem.</td>               ";
+	content += "		<td>Soluta!</td>              ";
+	content += "		<td>Illo.</td>                ";
+	content += "	</tr>                             ";
+	content += "	<tr>                              ";
+	content += "		<td>Lorem.</td>               ";
+	content += "		<td>Assumenda!</td>           ";
+	content += "		<td>Laboriosam.</td>          ";
+	content += "	</tr>                             ";
+	content += "</table>                              ";
+	
+	document.querySelector("button").onclick = () => {
+	/* 	document.querySelect("p#demo").innerHTML = content; */
+		document.write(content); 
+	}
+</script>
+</body>
+</html>

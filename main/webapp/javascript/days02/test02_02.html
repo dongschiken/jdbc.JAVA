@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+	.item{
+		background-color: red;
+	}
+	.new{
+		background-color: yellow;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  
+  <input type="text" id="name" name="name"><br>
+  <div id="demo"></div>
+  
+  
+  <script>
+  	const txtName = document.querySelector("#name");
+	const demo = document.querySelector("#demo");	
+  
+/* 	txtName.onkeydown = function(){
+		demo.innerText = event.keyCode;
+		
+	} */
+	btnAdd.onclick = function(){
+		exec();
+		
+	}
+	function exec(){
+		let name = txtName.value;
+		/* demo.innerHTML += name;*/
+		
+		let nameDiv = document.createElement("div");
+		nameDiv.innerText = name;
+		nameDiv.className = "item new";
+		demo.appendChild(nameDiv);
+		txtName.select(); 
+		
+		demo.scrollTop = demo.scrollHeight;
+		/* 새로 추가되는 클래스만 배경이 노랗게 깔리게 하자 */
+		
+	}
+	
+	if ($("#demo").children().last()) {
+        $("#demo").children().last().removeClass("new");
+    }
+	
+	
+  </script>
+  
+</div>
+</body>
+</html>

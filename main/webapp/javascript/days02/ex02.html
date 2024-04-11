@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+	.style{
+		color: red;
+		display: inline-block;
+		width: 200px;
+		border: 1px solid gray;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	javascript / java는 완전히 다른 언어.
+	javascript ( 1995 ) 
+  </xmp>
+  
+  <fieldset>
+  	<legend>html 적용 여부</legend>
+  	<form action="">
+  		<input type="radio" name="htmlApply" id="hyes" checked="checked">
+  		<label for="hyes">적용</label>
+  		<input type="radio" name="htmlApply" id="hno">
+  		<label for="hno">미적용</label>
+  		<br>
+  		<input type="text" id="message" class="long" value="<span class='style'>홍길동</span>" >
+  		<br>
+  		<button type="button">실행(exec)</button>
+  	</form>
+  </fieldset>
+  
+  <p id="demo"></p>
+</div>
+
+<script>
+	
+	$("button").on("click", function(){
+		// js로 radio 버튼 중에 적용, 미적용 check
+		/* document.getElementById(); */
+		/* document.querySelector(); */
+		let radioList = document.querySelectorAll("fieldset > form > input[type=radio]");
+		/* alert(radioList.length); */
+		//for (var i = 0; i < radioList.length; i++) {
+		//	var element = radioList[i];
+			
+		//	console.log(element.checked);
+			/* 적용 미적용 check 속성을 가져와서 한개씩 출력 */
+		//} // for 닫기
+		
+		
+		let message = document.getElementById("message").value;		
+		let demo = document.getElementById("demo");
+		
+		if(radioList[0].checked){ // html 적용
+			demo.innerHTML = message;
+		}else{ // html 미적용
+			demo.innerText = message;
+
+		}
+	}) // click 닫기
+	
+</script>
+</body>
+</html>

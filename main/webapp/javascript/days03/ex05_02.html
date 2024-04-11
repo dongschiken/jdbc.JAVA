@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	[다른 자료형을 비교할 때]
+	1. 숫자형 문자열 ( "24" )은 비교할 때 자동으로 숫자로 비교된다.
+  </xmp>
+</div>
+<script>
+	let x = 12;
+	let y = "24";
+	document.write( x < y ); // false
+	document.write( x > y);	 // false
+	document.write( x > NaN);// false
+</script>
+<script>
+	let z;
+	// ??= : 복합 대입 연산자.
+	// z 변수에 값이 할당되지 않거나 null 일경우 5를 할당해주고
+	// 값이 있다면 할당되지 않는다.
+	document.write( z ??= 5);
+</script>
+</body>
+</html>

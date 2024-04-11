@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<style>
+span.material-symbols-outlined {
+	vertical-align: text-bottom;
+}
+</style>
+
+
+
+</head>
+<body>
+	<header>
+		<h1 class="main">
+			<a href="#" style="position: absolute; top: 30px;">dongs Home</a>
+		</h1>
+		<ul>
+			<li><a href="#">로그인</a></li>
+			<li><a href="#">회원가입</a></li>
+		</ul>
+	</header>
+	<div>
+		<xmp class="code"> </xmp>
+		좋아하는 과목을 모두 선택하세요 ? <br> <input type="checkbox" name="subject"
+			id="kor" value="kor"> <label for="kor">국어</label> <input
+			type="checkbox" name="subject" id="eng" value="eng"> <label
+			for="eng">영어</label> <input type="checkbox" name="subject" id="mat"
+			value="mat"> <label for="mat">수학</label> <input
+			type="checkbox" name="subject" id="pe" value="pe"> <label
+			for="pe">체육</label> <br>
+		<button>확인</button>
+		<p id="demo"></p>
+	</div>
+	<script>
+
+		/* $("button").click(function(){	
+			  alert("button"); 	
+			$("input[type=checkbox]") == $(":checkbox"); 둘다 똑같은 표현
+			alert($(":checkbox").length);
+			
+			const ckbList = $(":checkbox");
+			let content = "<ul>";
+			for (var i = 0; i < ckbList.length; i++) {
+				const element = ckbList[i];
+				let subject = element.nextElementSibling.innerText;
+				if( element.checked ){
+					content += `<li>${element.value} : ${subject}</li>`;
+				}
+				
+			}
+			content += "</ul>"
+			$("#demo").html( content );
+		}); */
+
+		$("button").click(function() {
+			/* $(":checkbox:checked") 
+			   체크된 체크박스요소만 가져오는 식별자
+			 */
+			let content = "<ul>"
+			$(":checkbox[name=subject]:checked").each(function(index, element) {
+				content += `<li>${element.value}</li>`;
+			});
+			content += "</ul>"
+			$("#demo").html(content);
+
+		});
+	</script>
+</body>
+</html>

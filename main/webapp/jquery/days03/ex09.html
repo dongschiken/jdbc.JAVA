@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+		span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+	.txtbox{
+		width: 300px;
+	}
+	#items{
+		height: 200px;
+		overflow: auto;
+		border: 1px solid gray;
+		
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	동적 요소 생성, 추가, 수정, 삭제
+	
+	생성 : createElement()
+	추가 : appendChild()
+		  insertBefore()
+	삭제 : removeChild()
+	교체 : replaceChilde();
+	
+	
+	동적할당 예 ) 설문조사 항목수 : select 선택
+  </xmp>
+  
+</div>
+
+<select name="itemCount" id="itemCount">
+	<option>선택...</option>
+	
+</select>
+<!-- <br>
+<div id="items"></div> -->
+
+<script>
+	// 1
+	for (var i = 1; i <= 15; i++) {
+		let op = $(`<option value='${i}'>${i}</option>`);
+		$("#itemCount").append( op );
+	}
+	
+	
+	// 2
+	
+	
+	// 3
+	var container = $("<div id='items'></div>");
+	$("body > div").append(container);
+	$("#itemCount").on("change", function(){
+	   //container.html("");
+	   container.empty();
+	   let count = $(this).val();
+	   for (var i = 1; i <= count; i++) {
+		   container.append(`항목 ${i} : <input type='text' id='item${i}' class='box'>`);
+	}//for
+	});
+	
+
+ 
+
+</script>
+</body>
+</html>

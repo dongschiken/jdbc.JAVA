@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  <p id="demo"></p>
+</div>
+<script>
+	// js 배열 == 객체
+/* 	const person = [];
+	person[0] = "lee";
+	person[1] = "changik";
+	person[2] = 20;
+	alert( person[1] ); */
+	
+/* 	const person = [];
+	//const person = {}; // js 객체를 선언할때
+	person["lastname"] = "lee";
+	person["firstname"] = "changik";
+	person["age"] = 20;
+	
+	alert( person["lastname"] ); */
+	
+</script>
+
+<script>
+	//const m = [1, 2, 3];
+	// 배열 객체 확인 방법
+	//alert( typeof m );       	   // object
+	//alert( Array.isArray(m) );   // true
+	//alert( m instanceof Array ); // true
+</script>
+<script>
+	/* const fruits = [ "Banana", "Orange", "Apple", "Mango"];
+	// 1. 배열의 크기 속성
+	let size = fruits.length;
+	// 2. 배열 문자열로 반환 => 출력
+	console.log( fruits[2].toString() );
+	// 3. 배열의 요소 얻어오기 
+	//console.log( fruits[2] + " / " + fruits.at(2) ); 
+	
+	// 4. 배열의 조인( join(구분자) ), 
+	//Banana,Orange, Apple, Mango
+	$("#demo").html("<li>" + fruits.join("</li><li>") + "</li>");
+	
+	// 5. 배열의 요소 추가
+	//fruits[size] = "PineApple";
+	fruits.push("PineApple");
+	document.write( fruits.toString() + "<br>" );
+	
+	// 6. pop() : 배열의 마지막 요소를 제거
+	let el = fruits.pop();
+	//document.write( fruits.toString() + "<br>" );
+	document.write( el ); */
+</script>
+<script>
+	
+	/* const m = ['a', 'b', 'c', 'd'];
+	m.push("e", "b"); // 맨 뒤에 새로운 요소 추가
+	document.write( m.toString() + "<br>" );
+	m.pop();
+	document.write( m.toString() + "<br>" );
+	
+	// 7. shift() : 첫번째 요소를 빼는 함수 / unshift() : 맨 앞에 새로운 요소 추가
+	//let el = m.shift();
+	document.write( m.toString() + "<br>" );
+	let l = m.unshift("z", "y"); // 길이를 반환해준다.
+	document.write( l + "<br>");
+	document.write( m.toString() + "<br>" );
+	
+	// 배열의 1번째 요소를 제거
+	delete m[1];
+	delete
+	document.write( m.toString() + "<br>" ); */
+</script>
+<script>
+	/* const n = [1, 2, 3];
+	const m = [4, 5, 6];
+	const s = [7, 8, 9];
+	//const nm = n.concat(m).concat(s); 
+	const nm = n.concat(m , s);
+	document.write( nm.toString() + "<br>" ); */
+</script>
+<script>
+	// 
+	// 9. copyWithin(2, 0) m을 카피하겠다. 2번째 부터 m의 0번째 부터 전부
+	//    크기는 변하지 않아서 4개로 고정
+/* 	const m = ["a", "b", "c", "d", "e"];
+	document.write( m.toString() + "<br>" );
+	
+	//m.copyWithin(2, 0);
+	m.copyWithin(2, 0, 2);
+	document.write( m.toString() + "<br>" ); */
+	// 10. 
+</script>
+
+<script>
+/* 	const m = ["a", "b", "c", "d", "e"];
+	document.write( m.toString() + "<br>" );
+	
+	// 10. splice(1, 2) 배열에 새 요소를 추가. 1 == 삽입할 위치, 2 == 제거할 요소, 3 == 추가할 요소
+	// 3번째 요소 주지 않으면 요소를 삭제하는 용도로 사용가능
+	//m.splice(2, 2, 'x', 'y', 'z');
+	m.splice(2, 2);
+	document.write( m.toString() + "<br>" );
+	
+	const n = m.toSpliced(2, 2);
+	document.write( n.toString() + "<br>" ); */
+</script>
+<script>
+	const m = [1, 2, 3, 4, 5];
+	
+	//const n = m.slice(3);
+	const n = m.slice(1, 4);
+	document.write( n.toString() + "<br>" );
+</script>
+</body>
+</html>

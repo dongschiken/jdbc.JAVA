@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  
+  <table id="tblDept">
+     <thead>
+        <tr>
+           <th><input type="checkbox" class="all"> 모두 선택</th>
+           <th>Name</th>
+           <th>Loc</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr>
+           <td><input type="checkbox" id="ck1"></td>
+           <td>Quam.</td>
+           <td>Sapiente.</td>
+        </tr>
+        <tr>
+           <td><input type="checkbox" id="ck2" data-name='Consequatur!'></td>
+           <td>Consequatur!</td>
+           <td>Nisi.</td>
+        </tr>
+        <tr>
+           <td><input type="checkbox" id="ck3"></td>
+           <td>Tenetur!</td>
+           <td>Modi.</td>
+        </tr>
+        <tr>
+           <td><input type="checkbox" id="ck4"></td>
+           <td>Earum.</td>
+           <td>Officiis.</td>
+        </tr>
+     </tbody>
+     <tfoot>
+         <tr>
+          <td colspan="3" align="center">
+            <button>선택 확인</button>
+          </td>
+         </tr>
+     </tfoot>
+  </table>
+  
+  <p id="demo"></p>
+
+</div>
+
+<script>
+	let pdemo = document.querySelector("#demo");
+	//#tblDept > thead > tr > th:nth-child(1) > input
+	let allCkb = document.querySelector("#tblDept > thead input.all");
+	let ckbs = document.querySelectorAll("#tblDept > tbody input[id^='ck']");
+	
+	allCkb.onclick = function(){
+		for (var i = 0; i < ckbs.length; i++) {
+			ckbs[i].checked = this.checked;
+		}
+	}
+	
+	for (var i = 0; i < ckbs.length; i++) {
+		ckbs[i].onclick = function(){
+			let isCkbsAllChecked = true;
+			for (var i = 0; i < ckbs.length; i++) {
+				isCkbsAllChecked = ckbs[i].checked;
+				if( !isCkbsAllChecked ) break;
+					
+				}
+			allCkb.checked = isCkbsAllChecked;
+			}// click
+		} // for
+	// 선택 확인이라는 버튼을 클릭할 때 체크된 체크박스의 id 속성값을
+	// #pdemo 출력
+	
+	document.querySelector("tfoot button").onclick = function(){
+		let content = "<ul>";
+		for (var i = 0; i < ckbs.length; i++) {
+			const ckb = ckbs[i];
+			
+			if( ckb.checked ){
+				const ckb_left = ckb.getAttribute( "data-name" ); //  ckb.parentElement.nextElementSibling.innerText;
+				content += `<li>${ ckb.id } / ${ ckb_left }</li>`;
+			} //if
+		} //for
+		content += "</ul>";
+		pdemo.innerHTML = content;
+	};
+	
+</script>
+</body>
+</html>

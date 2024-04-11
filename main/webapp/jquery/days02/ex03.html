@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  <input type="radio" name="group" value="aaa">aaa<br>
+  <input type="radio" name="group" value="bbb">bbb<br>
+  <input type="radio" name="group" value="ccc">ccc<br>
+  <input type="radio" name="group" value="ddd">ddd<br>
+  <input type="radio" name="group" value="eee">eee<br>
+  <br>
+  <button>실행</button>
+  <p id="demo"></p>
+  
+</div>
+
+
+<script>
+	
+	// 5개의 라디오 버튼 중에 1개를 체크해서 실행버튼을 누르면 p에 그 문자가 출력
+/* 	let start_btn = document.querySelector("button");
+	let input_list = document.querySelectorAll("body > div > input[type=radio]");
+	let demo = document.querySelector("#demo");
+	
+	
+	
+	start_btn.onclick = function(){
+		console.log(input_list.item);
+		if(input_list[0].checked){
+			demo.innerHTML = input_list[0].value;
+		}else if(input_list[1].checked){
+			demo.innerHTML = input_list[1].value;
+		}else if(input_list[2].checked){
+			demo.innerHTML = input_list[2].value;
+		}else if(input_list[3].checked){
+			demo.innerHTML = input_list[3].value;
+		}else{
+			demo.innerHTML = input_list[4].value;
+		}
+	} */
+	
+	/* document.getElementsByTagName("button")[0].onclick = () => {
+		const radioList = document.getElementsByName("group");
+		let flag = false;
+		for(var i = 0; i < radioList.length; i++) {
+			const element = radioList[i];
+			if( element.checked ){
+				flag = true;
+				demo.innerHTML = element.value;
+				break;
+			}
+		}
+		
+		if(!flag){
+			alert( "라디오 버튼 1개 체크하세요. ")
+		}
+		
+	}; */
+	
+	//[2]
+	// 에러 메시지의 정확한 이유 및 파악 -> 해결...
+	/* alert($(":radio[name=group]").is(":checked").val()); */
+	// alert($(":radio[name=group]").is(":checked").valueOf());
+	
+	
+	
+	//[1]
+ 	let flag = false;
+	$("button").on("click", function(){	
+		
+		//alert($(":radio[name=group]").is(":checked"));
+		
+/* 		if($(":radio:checked").val()){
+			$("#demo").text($(":radio:checked").val());	
+		}else{
+			alert("체크하세요");
+		} */
+			
+		if($(":radio[name=group]:checked").length ){
+			$("#demo").text($(":radio:checked").val());	
+		}else{
+			alert("체크하세요");
+		}
+		
+		/* let radio = $("body > div > input[type='radio']")
+		
+		$(":radio").each(function(key, value){
+			if(value.checked){
+				$("#demo").html(value.value);
+				flag = true;
+			}
+			
+		}); // each
+		if( !flag ){
+			alert("체크해야한다.");
+		} */
+	}) 
+	
+	
+	
+</script>
+</body>
+</html>

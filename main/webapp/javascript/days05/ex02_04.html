@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  
+  <input type="text" class="full" value="김성준, 박정호, 이준희, 주강민" />
+  <p id="demo"></p>
+  
+</div>
+<script>	
+
+ 	//let full = document.querySelector(".full")
+	//full.onkeyup = function(event){
+	//	if( event.keyCode == 13){
+	//		let fv = full.value.split(/\s*,\s*/);
+	//		for (var i = 0; i < fv.length; i++) {
+	//			document.getElementById("demo").innerHTML += `<li>${fv[i]}</li>`;
+	//		}
+	//	}
+		
+	//} 
+	
+	
+	$(":text").keydown( function(event){
+		if( event.which == 13 ){
+			let data = $(this).val();
+			let pattern = /\s*,\s*/;
+			let names = data.split(pattern);
+			let content = "<ul>";
+			
+			for (var i = 0; i < names.length; i++) {
+				content += `<li>${name[i]}</li>`;
+			}
+			content += "</ul>";
+			
+			$("#demo").html(content);
+		}
+	});
+	
+</script>
+<script>
+	let msg = "hello world";
+	const arr = msg.split("");
+	for (var i = 0; i < arr.length; i++) {
+		document.write( arr[i] + "<br>");
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	Number()
+	parseInt()
+	parseNumber()
+  </xmp>
+</div>
+<script>
+	// "10"을 숫자 10으로 형변환
+/* 	console.log( Number("10")     ); // 10
+	console.log( parseInt("10")   ); // 10
+	console.log( parseFloat("10") ); // 10 */
+	
+	// 공백이 있는 "    10"을 숫자 10으로 형변환
+/* 	console.log( Number("   10")     ); // 10
+	console.log( parseInt("   10")   ); // 10
+	console.log( parseFloat("   10") ); // 10 */
+	
+	
+/* 	console.log( Number("10.33")     ); // 10.33
+	console.log( parseInt("10.73")   ); // 10
+	console.log( parseFloat("10.33") ); // 10.33 */
+	
+/* 	console.log( Number("10 20 30")     ); // 10.33
+	console.log( parseInt("10 20 30")   ); // 10
+	console.log( parseFloat("10 20 30") ); // 10 */
+	
+	/* console.log( Number("10, 20, 30")     ); // NaN
+	console.log( parseInt("10, 20, 30")   ); // 10
+	console.log( parseFloat("10, 20, 30") ); // 10
+	
+	
+	console.log( Number(true)     ); // 1
+	console.log( parseInt(true)   ); // NaN
+	console.log( parseFloat(true)); // NaN
+
+	
+	console.log( parseInt("10eat")); // 10
+	
+	console.log( Number(new Date()) ); */
+	
+</script>
+
+<script>
+	let x = 999999999999999;
+	let y = BigInt(9999999999999999);
+	
+	//console.log( y );
+	
+	// 정수 끝에 n을 붙이면 BigInt 자료형이다.
+	let x2 = 14141341342334234234234n;
+	//alert( typeof x2 );
+</script>
+<script>
+	let x3 = Number.MAX_VALUE;
+	//alert( x3 );
+</script>
+</body>
+</html>

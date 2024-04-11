@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+</div>
+<script>
+	let x = 3;
+	let y = 3.14;
+	//alert( typeof x ); //number
+	// js 숫자는 64비트 부동소수점
+	// js 숫자는 최대 15자리까지 정확하다.
+	let z = 123e5;
+	
+	x = 999999999999999;  // 9가 15개
+	x = 9999999999999999; // 9가 16개
+	//alert( x );
+	
+	z = 0.2 + 0.1;
+	//alert( z ); // 0.300000004400000000
+	
+	z = (10*0.2 + 10*0.1)/10;
+	//alert( z ); // 0.3 
+	
+	// 10 + 20 = 30
+	// "10" + "20" = "1020";
+	// 10 + 20 + "30" = "3030"
+</script>
+<script>
+	// 10010
+	//document.write( "100" + "10" );
+	
+	// 90
+	document.write("100" - "10" +"<br>");
+	
+	document.write("100" * "10" +"<br>");
+	
+	document.write("100" / "10" +"<br>");
+	
+	// js 모든 숫자 연산자는 문자열을 숫자로 자동 변환하려고 한다. ( 덧셈은 안된다. )
+</script>
+<script>
+	//alert(isNaN( 100 / "test" )); //true
+	//alert( typeof NaN ); // number
+</script>
+<script>
+	//alert( 2/0 ); // infinity
+	//alert( -2/0 ) // -infinity
+	
+	//alert( typeof Infinity );
+	
+</script>
+<script>
+	// js에서 숫자앞에 0x를 붙이면 16진수로 인식한다.
+	let x = 0x11;
+	let y = 0xff;
+	// js에서 숫자앞에 0을 붙이면 8진수로 인식한다.
+	let z = 021;
+	
+</script>
+<script>
+
+	x = 10;
+	// toString() == 10진수 string
+	console.log( x.toString()   );  //string
+	console.log( x.toString(2)  );  //string
+	console.log( x.toString(8)  );  //string
+	console.log( x.toString(16) );  //string
+	
+</script>
+
+<script>
+	let x = "admin";			 // number
+	let y = new String("admin"); // string
+	
+	// x == y  true
+	// x === y false
+	
+	let a = 10;				// number
+	let b = new Number(10); // object
+</script>
+</body>
+</html>

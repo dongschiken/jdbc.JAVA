@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	[ js 문자열 메서드 ]
+	java 문자열 속에 일부 문자열을 추출하는 메서드 substring
+	js 문자열 속에 일부 문자열 추출하는 메서드
+	1. slice()
+	2. substring()
+	3. substr()
+  </xmp>
+</div>
+
+<script>
+	// slice() substring()의 차이점 ==> slice는 음수를 사용할 수 있고 substring()은 안된다.
+	let rrn = "891223-1700014";
+	let y = rrn.slice(0, 2);
+	//alert( y ); // 89
+	let m = rrn.substring(2, 4);
+	//alert( m ); // 12 
+	// rrn.substr( start, length )
+	let d = rrn.substr(4, 2); // 23
+	//alert( d );
+	//alert( rrn.slice(7) ); // 1700014
+	//alert( rrn.slice( -7 , -5)); // 17
+	
+</script>
+<script>
+	// js에서 toUpperCase() , toLowerCase()
+	
+	let text1 = "Hello World";
+	let text2 = text1.toUpperCase();
+	//alert(text2);
+	let text3 = text1.toLowerCase();
+</script>
+<script>
+	let a = "hello";
+	let b = "world";
+	let ab = a + b;
+	
+	//alert( a.concat(" ").concat(b));
+	
+</script>
+<script>
+	let t = "  hello world   ";
+	//t = t.trim();
+	// t = t.trimStart();
+	t.trimEnd()
+	//alert( `[${t}]`);
+	
+</script>
+
+<script>
+
+	//let no = "5";
+	//alert( no.padStart(4, "0"))
+	//alert( no.padStart(4, "x"));
+	//alert( no.padStart(4, "x"));
+	
+	let no = 7;
+	
+	//alert(parseInt(no+"".padStart(4, 0)));
+	
+	let line = "-";
+	//alert( line.repeat(10) );
+</script>
+
+<script>
+	let msg = "홍길동 안녕하세요. 홍길동 입니다.";
+	// replace()
+	//let c_msg = msg.replaceAll("홍길동", "XXX");
+	let c_msg = msg.replace( /홍길동/g , "XXX");
+	alert(c_msg);
+</script>
+</body>
+</html>

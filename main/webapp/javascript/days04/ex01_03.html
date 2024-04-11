@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	[js 함수 호출 방법]
+	1. 이벤트 발생
+	2. js 코딩으로 함수 호출
+	3. 자체 호출 ( 함수 클로저 ) : 이름없는 함수를 선언할때 바로 호출해버리는것 
+	 ( function(함수 선언 매개변수){구현부} )(함수 호출 매개변수)
+  </xmp>
+</div>
+<script>
+	// 이런식으로 함수를 구성하면 ( 변수에 함수를 대입하면 ) 호이스팅 되지 않는다.
+	/* const test = function(a , b){
+		alert( "익명함수 표현식" );
+	} */
+</script>
+<script>
+	// 자체 호출 함수
+	/* (function (a,b){
+		alert("익명함수...")
+	})();
+ */
+</script>
+<script>
+	function test(){
+		alert("test");
+	}
+	alert( typeof test );
+	// 그 객체의 문자열을 반환해주는 함수 : toString()
+	alert( test.toString() );
+</script>
+</body>
+</html>

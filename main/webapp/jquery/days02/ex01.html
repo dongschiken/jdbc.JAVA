@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  
+  <button>Turn ON</button>
+  <button>Turn OFF</button>
+  <br>
+
+
+</div>
+<script>
+$(document).ready(function() {
+    let img = $("<img>").appendTo("div"); // 이미지를 div에 추가
+    $("button").last().hide(); // 문서 로딩 시 마지막 버튼 숨김
+
+    // 전구를 켜는 함수
+    function turnOnBulb() {
+        img.attr({
+            "src": "/webPro/javascript/images/pic_bulbon.gif",
+            "alt": "bulb"
+        });
+        $("button").first().hide().next().show();
+    }
+
+    // 전구를 끄는 함수
+    function turnOffBulb() {
+        img.attr({
+            "src": "/webPro/javascript/images/pic_bulboff.gif",
+            "alt": "bulb"
+        });
+        $("button").last().hide().prev().show();
+    }
+
+    // 첫 번째 버튼 클릭 이벤트
+    $("button").first().click(turnOnBulb);
+    
+    // 마지막 버튼 클릭 이벤트
+    $("button").last().click(turnOffBulb);
+
+    // 이미지 호버 이벤트
+    img.hover(turnOnBulb, turnOffBulb);
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body onload="init();">
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  
+ 
+  <input id="pi_input" type="range" value="0" min="1" max="100" step="1">
+  <output id="out"></output>
+  <p>홍길동
+</div>
+<script>
+
+	let fontSize = 16;
+	const out = document.getElementById("out")
+	const pi_input = document.getElementById("pi_input")
+	const pElem = document.getElementsByTagName("p")[0];
+	
+	function init(){
+		pElem.style.fontSize = `${fontSize}px`
+		out.innerHTML =  `${fontSize}px`;
+		pi_input.value = fontSize;
+	}
+	pi_input.oninput = function(){
+		fontSize = this.value;	
+		out.textContent =  `${fontSize}px`;
+		pElem.style.fontSize = `${fontSize}px`
+	}
+</script>
+</body>
+</html>

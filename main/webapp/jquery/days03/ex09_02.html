@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	
+  </xmp>
+  <h3>마지막 자식</h3>
+  <h3>첫번째 자식</h3>
+  <div class="container" style="background-color: yellow">
+  	<div class="inner">Lorem.</div>
+  	<div class="inner">Temporibus?</div>
+  </div>
+</div>
+
+<script>
+	$("h3").first().on("click", function(){
+		// alert("1");
+		// 클릭된 h3 태그를 container div의 마지막 자식으로 추가
+		$(".container").append($(this));
+	});
+	$("h3").last().on("click", function(){
+		// alert("2");
+		// 클릭된 h3 태그를 container div의 첫번째 자식으로 추가
+		//$(".container").prepend($(this));
+		$(this).prependTo($(".container"));
+	});
+</script>
+</body>
+</html>

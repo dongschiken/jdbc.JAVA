@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	[ket event]
+	1. keydown  : 키보드 누를때, 이벤트 취소 O, 기능키 O, 대소문자 X
+	2. keypress : 키보드 누를때, 이벤트 취소 O, 기능키 X, 대소문자 O
+	3. keyup    : 키보드 놓을때, 이벤트 취소 X
+  </xmp>
+  <input type="text" id="txt1" class="full" autofocus="autofocus">
+  <br>
+  <input type="text" id="txt2" class="full">
+</div>
+<script>
+/* 	const txt1 = document.querySelector("#txt1");
+	const txt2 = document.querySelector("#txt2");
+	
+	txt1.onkeydown = function(){
+		//console.log("txt1-keydown");
+	}
+	txt1.onkeypress = function(){
+		//console.log("txt1-keypress");
+	}
+	txt1.onkeyup = function( event ){
+		//console.log("txt1-keyup");
+		//console.log( this.value );
+		if( event.keyCode == 13 ){
+			txt2.value = this.value;
+		}
+	} */
+</script>
+
+</body>
+</html>

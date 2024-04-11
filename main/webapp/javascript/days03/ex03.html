@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	1. js 서버에서 실행되지 않음
+	2. js 클라이언트에서 실행된다. ( 웹 브라우저 )
+	3. js 명령문은 작성된 순서대로 실행된다.
+	4. 실문문 뒤에 세미콜론을 추가. ( 세미콜론을 생략 할 수 있다. 하지만 세미콜론 사용을 권장 )
+		window.alert("test");
+		let a;  
+		let b;	
+		let c;
+		let a, b, c;
+		a=1;
+		b=2;
+		c=3;
+	5. js도 대소문자를 구분한다.
+	6. js 주석 처리 == 자바와 동일한다.
+	7. js 코딩에서 여러 공백은 무시된다.
+		let name = "홍길동";
+		let name = "홍길동";
+		let c = 3 + 5;
+	8. 최고의 가독성을 위해서 개발자들은
+	   1개의 라인에 80자를 초과하지 않도록 한다.
+	   ex)_ document.getElementById("demo").innerHTML 
+	9. JS 예약어
+	  abstract   arguments   await*   boolean
+      break   byte   case   catch
+      char   class*   const   continue
+      debugger   default   delete   do
+      double   else   enum*   eval
+      export*   extends*   false   final
+      finally   float   for   function
+      goto   if   implements   import*
+      in   instanceof   int   interface
+      let*   long   native   new
+      null   package   private   protected
+      public   return   short   static
+      super*   switch   synchronized   this
+      throw   throws   transient   true
+      try   typeof   var   void
+      volatile   while   with   yield
+    10. JS 값의 2가지 유형
+    	1) 고정된 값 (리터럴)
+    		100
+    		3.14
+    		'A'
+    		"Name"
+    		true false
+    	2) 변수값 ( 변수 ) 
+    	   ㄱ. var  1995 ~ 2015 (ES6) 전역, 지역변수 모두 선언가능
+    	   ㄴ. let  블럭(지역) 변수 
+    	   	  {
+    	   	  	영역 연산자 ( 블럭 연산자 )
+    	   	  	let age ;
+    	   	  	const pi;
+    	   	  }
+    	   ㄷ. const  블럭변수 ( 상수 )
+    	   ㄹ. 변수 선언하지 않고 사용 가능하다.
+ </xmp>
+</div>
+<script>
+	// 변수선언 없이 사용 가능
+	name = "홍길동 2";
+	alert(name);
+</script>
+</body>
+</html>

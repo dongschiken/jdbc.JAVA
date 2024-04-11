@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	나이를 저장하는 텍스트 박스 선언
+	실행 버튼 선언
+	출력 demo p 태그 선언
+	
+	30살 이상 => "old"
+	30살 미만 => "yound"
+  </xmp>
+  
+  <!-- input태그에서 입력되는 값은 모두 string 타입이다. -->
+  <input type="text" name="age_text" id="age_text" value="20">나이입력
+  <br>
+  <button>실행</button>
+  <p id="demo"></p>
+</div>
+<script>
+	let txt = document.getElementById("demo");
+	
+	/* document.querySelector("button").onclick = function(){
+		let input = document.querySelector("[type=text][name=age_text]");
+		txt.innerHTML = input.value;
+		if( input.value >= 30 ){
+			txt.innerText += " : old";
+		}else{
+			txt.innerText += " : young";
+		}
+	} */
+	
+	document.querySelector("button").onclick = function(){
+		let age = document.querySelector("[type=text][name=age_text]").value;
+		let content ;
+		
+		if ( !age.trim() ){
+			alert("입력값이 없습니다.");
+			return;
+		}
+		
+		if( isNaN(age)){
+			content = "입력 잘못"
+			document.querySelector("[type=text][name=age_text]").select();
+		}else{
+			content = age >= 30 ? "old" : "young";
+		}
+		txt.innerHTML = content;
+	}
+</script>
+</body>
+</html>

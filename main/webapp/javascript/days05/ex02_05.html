@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+</div>
+<script>
+	let text = "홍길동 ! 안녕하세요. 홍길동입니다. 홍길동";
+	//let index = text.lastIndexOf("홍길동");
+	//alert( index );
+	
+	// 홍길동의 위치를 모두 찾아서 출력
+	let index = text.indexOf("홍길동");
+	
+	while ( (index = text.indexOf("홍길동", index)) != -1) {
+		//console.log(index);
+		document.write(index + "<br>");
+		index += "홍길동".length;
+	}
+	
+</script>
+<script>
+	index = text.search("홍길동");
+	
+</script>
+</body>
+</html>

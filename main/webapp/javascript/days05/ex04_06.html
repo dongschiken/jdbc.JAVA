@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+</div>
+
+<script>
+	const m = [3, 11, 5, 2, 4, 1];
+	document.write( m.toString() + "<br>");
+	
+	// 배열을 무작위로 섞기
+	//0 <= 0.79337586.... < 1.0;
+	//document.write(Math.random() + "<br>" );
+	m.sort( (a, b) => Math.random() - 0.5 );
+	document.write( m.toString() + "<br>");
+/* 	let max = m[0];
+	let min = m[0]; */
+	
+/* 	for (var i = 1; i < m.length; i++) {
+			if( max < m[i] ){
+				max = m[i];
+			}
+			if( min > m[i] ){
+				min = m[i];
+			}
+	} */
+	
+/* 	m.sort( (a, b) => a-b);
+	let max = m.pop();
+	let min = m.shift(); */
+	
+	//document.write( `max=${max}, min=${min}` );
+	
+	
+	let max = Math.max.apply(null, m);
+	let min = Math.min.apply(null, m)
+	document.write( `max=${max}, min=${min}` );
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+	#container{
+		display: flex;
+		width: 60%;		
+		margin: 0 auto;
+	}
+	#container > div{
+		/* border: 1px solid gray; */
+		width: 100%;	
+	}
+	#container > div > select{
+		border: 1px solid gray;
+		width: 100%;	
+		height: 200px;
+	}
+	button{
+		width: 100%;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+  
+  <div id="container">
+  	<div>
+	  	<select name="" id="leftCmb" multiple = "multiple">
+		  	<option value="" selected="selected">강명건</option>
+		  	<option value="">권맑음</option>
+		  	<option value="" selected="selected">김영진</option>
+		  	<option value="" selected="selected">김진성</option>
+		  	<option value="">박우현</option>
+	  	</select>
+  	</div>
+  	<div>
+  		<button>▶</button><br>
+  		<button>▶▶</button><br>
+  		<button>◀</button><br>
+  		<button>◀◀</button><br>
+  	</div>
+  	<div>
+  		<select name="" id="rightCmb" multiple = "multiple">
+		  	
+	  	</select>
+  	</div>
+  	
+  	<div></div>
+  </div>
+</div>
+    <script>
+        const leftCmb = document.querySelector("#leftCmb");
+        const rightCmb = document.querySelector("#rightCmb");
+        
+        // <button>▶</button>
+        document.querySelector("button:first-of-type").onclick = function(){
+            // leftCmb.querySelectorAll("option");
+            let leftCmbOptions = document.querySelectorAll("#leftCmb option");
+            // alert(lefCmbOptions.length);
+
+            for(let i = leftCmbOptions.length-1, j = 0; i >= 0; i--){
+                if(leftCmbOptions[i].selected){
+                    const removeOp = leftCmb.removeChild(leftCmbOptions[i]);
+                    rightCmb.appendChild(removeOp);
+                }
+            }
+
+            /*
+            const removeOp = leftCmb.removeChild(leftCmbOptions[0]);
+            rightCmb.appendChild(removeOp);
+            */
+            
+
+            /* for(let i = 0, j = 0; i < leftCmbOptions.length; i++){
+                const op = leftCmbOptions[i];
+                // console.log(op.selected + " / " + op.getAttribute("selected"));
+                if(op.selected){
+                    // rightCmb[j++] = new Option(op.text);
+                    // [js 복제]
+                    rightCmb.appendChild(op.cloneNode(true));
+                }
+            } */
+        }
+
+        document.querySelector("button:nth-of-type(2)").onclick = function(){
+            let leftCmbOptions = document.querySelectorAll("#leftCmb option");
+            // alert(lefCmbOptions.length);
+
+            for(let i = leftCmbOptions.length-1, j = 0; i >= 0; i--){
+                const removeOp = leftCmb.removeChild(leftCmbOptions[i]);
+                rightCmb.appendChild(removeOp);
+            }
+            
+        }
+    </script>
+</body>
+</html>

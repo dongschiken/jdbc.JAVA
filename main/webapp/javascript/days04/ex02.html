@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+</div>
+<script>
+	// alert( this ) window 객체.
+	// js object타입 : array, date, Object
+	
+	// alert ( person ) // undefined
+	// alert ( typeof person )
+	
+	const person = {
+			// 필드 선언
+			name:"hong gin dong",
+			age : 20 ,
+			// 메서드 선언
+			printPerson:function(){
+				alert( this );
+				return `> name=${this.name}, age=${this.age}`;
+				
+				// JSP 에서 백틱 연산자 사용해서 변수 출력할때는 \를 붙이자 `\${this.name}
+				// 이유 : jsp EL이라는 표현언어에서 ${}이렇게 표현하기 때문에 백틱에서 사용하는 문법과 동일해서
+				// 충돌나지 않도록 하기 위해서 \를 붙여서 사용
+			}
+			
+	};
+	
+	// alert( person ); // object Object
+	
+	alert( person.name );
+	alert( person["name"]);
+	alert( person.printPerson());
+	
+	// js에서의 객체는 속성들을 저장하는 컨테이너...
+	/*
+	[ this 위치에따른 사용방법 정리]
+	1. alert(this) == window 객체
+	2. person { printPerson: function () { this } } == person 자기자신의 객체를 나타냄
+	3. funtion test(){ this } == window 객체 자기자신
+	4. $("#btn1").onclick = function () { this } == 이벤트를 받은 객체 (HTMLButtonELement)
+	5. 엄격모드에서는 this 사용할 수 없다.
+	*/
+</script>
+<script>
+	// 객체
+	// 문자열(string), 날짜(date), 불린형(boolean)
+	let name = "홍길동";
+	alert( typeof name );
+	
+	let name = new String();ㅣ // 성능이 저하된다.
+	
+	let age = 20;
+	alert ( typeof age );
+	
+	let age = new Number(); // 성능저하로 사용하지 않는 방법
+	
+</script>
+</body>
+</html>

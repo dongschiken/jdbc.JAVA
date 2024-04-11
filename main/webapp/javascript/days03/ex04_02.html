@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	
+  </xmp>
+  <p id="demo"></p>
+  <script>
+  	//var age = 50;
+  	/* document.getElementById("demo").innerText = age; */
+  	// age 변수를 또 선언
+  	// 변수를 재선언 가능하다.
+  	// 재선언할지라도 변수값은 손실되지 않고 유지된다.
+  	//var age;
+  	//document.getElementById("demo").innerText = age;
+  </script>
+  
+   <script>
+/*   	let age = 50;
+  	document.getElementById("demo").innerText = age; */
+  </script>
+  <script>
+  // js 호이스팅
+  // 모든 선언을 현재 범위( 함수 안, 현재 script 안 )의 맨 위로 이동시키는 js의 기본 기능 ( 동작 )
+/*   age = 20;	
+  
+  
+  document.getElementById("demo").innerText = age;	
+  var age; */
+  
+  </script>
+   <script>
+   
+  //Cannot access 'age' before initialization
+  // let const 변수를 선언하면
+  // 호이스팅에 의해서 맨 위로 이동은 하지만
+  // 변수에 접근해서 초기화는 X
+  age = 100;	
+  
+  
+  document.getElementById("demo").innerText = age;	
+ 
+  let age;
+  // 변수는 선언 후에 사용해라 무조건
+  </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	1. 산술 연산자 + - * / %
+	2. 증감 연산자 ++ --
+	3. 복합대입 연산자 += -= *= /= %= **=
+	4. 비교 연산자 == !+ > < >= <= ( === , !==  :  타입도 비교한다. )
+	5. 문자열 연결 연산자 +
+	6. 논리 연산자 
+		└ 일반 논리 연산자 : && || !
+		└ 비트 논리 연산자 : $ ^ | ~
+	7. 타입 연산자 : typeof 
+  </xmp>
+</div>
+<script>
+	let firstNmae = "길동";
+	let lastName = "홍";
+	let name = lastName + " " + firstNmae;
+	/* alert ( name ); */
+	
+	//let x = 5 + 3; // 숫자 덧셈 연산자.
+	let x = "5" + 3;
+	alert ( typeof x );
+</script>
+<script>
+	document.write( 5 + 3 );document.write("<br>");
+	document.write( 5 - 3 );document.write("<br>");
+	document.write( 5 * 3 );document.write("<br>");
+	// 5**3 ==> 5^3
+	document.write( 5 ** 3 );document.write("<br>");
+	document.write( Math.pow(5,3));document.write("<br>");
+	document.write( 5 / 3 );document.write("<br>");
+	document.write( 5 % 3 );document.write("<br>");
+	document.write( 5 / 0 );document.write("<br>");
+	document.write( 5 % 0 );document.write("<br>");
+</script>
+<script>
+	let x = 20;
+	x++;
+	x += 1;
+	document.write( x ); document.write("<br>");
+</script>
+
+<script>
+	
+	document.write( 5 == 3 );document.write("<br>");
+	document.write( 5 != 3 );document.write("<br>");
+	document.write( 5 > 3 );document.write("<br>");
+	document.write( 5 < 3 );document.write("<br>");
+	document.write( 5 >= 3 );document.write("<br>");
+	document.write( 5 <= 3 );document.write("<br>");
+	
+</script>
+</body>
+</html>

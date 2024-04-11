@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+	match()
+	- 문자열, 정규표현식을 기준으로 일치하는 결과가 포함된 배열을 리턴하는 함수
+	matchAll()
+	- 문자열, 정규표현식을 기준으로 일치하는 결과가 포함된 반복자를 리턴하는 함수
+  </xmp>
+</div>
+<script>
+	// g 옵션을 추가하지 않으면 일치하는 첫번째를 반환한다.
+	let text = "The rain in SPAIN stays main [rain]";
+	
+	let searchString = /ain/gi;
+	const arr = text.match(searchString);
+	//alert(arr.length);
+	// includes는 대소문자 구분을 한다.
+	//alert(text.includes("rain", 12));
+</script>
+<script>
+	// 대소문자 구분을 한다.
+	let url = "http://www.sist.co.kr";
+	alert(url.startsWith("http://"));
+	//url.endsWith("kr");
+	
+</script>
+</body>
+</html>

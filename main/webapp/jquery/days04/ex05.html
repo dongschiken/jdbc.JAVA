@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+	span.material-symbols-outlined{
+		vertical-align: text-bottom;
+	}
+</style>
+
+
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute; top: 30px;">dongs Home</a></h1>
+  <ul>
+  	<li><a href="#">로그인</a></li>
+  	<li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+
+  </xmp>
+</div>
+<div style="display : flex; justify-content: space-around">
+	<input type="text" autofocus="autofocus" />
+	+
+	<input type="text" />
+	=
+	<input type="text" disabled="disabled">
+</div>
+<script>
+
+
+	let txt1 = $(":text").first();
+	let txt2 = $("input[type=text]").eq(1);
+	let txt3 = $(":text").last();
+	
+	txt1.on("keydown" , function(){
+		if( event.which == 13 ){
+			txt2.focus();
+		} 
+	})
+	
+	txt2.on("keydown" , function(){
+		if( event.which == 13 ){
+			let result = parseInt( txt1.val() ) + Number( txt2.val() );
+			txt3.val( result );
+			txt1.select();
+		} 
+	});
+	
+</script>
+</body>
+</html>
